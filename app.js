@@ -12,6 +12,7 @@ const hpp = require("hpp");
 
 const errorHandler = require("./handlers/errorHandler");
 const leaseRouter =require('./routes/leaseRoute')
+const userRoute =require('./routes/userRoute')
 
 const app = express();
 
@@ -43,6 +44,7 @@ app.use(
 );
 
 app.use('/api/v1/leases',leaseRouter)
+app.use('/api/v1/users',userRoute)
 
 
 app.all('*',(req,res,next)=>{

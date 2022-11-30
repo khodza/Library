@@ -29,13 +29,15 @@ const createSendToken = (user, statusCode, res) => {
     },
   });
 };
-exports.signUp = catchAsync(async (req, res, next) => {
-  if(req.body.role ){
-    return next(new AppError(`You can't set your role manually!,Contact to administration to do so`))
-  }
-  const newUser = await User.create(req.body);
-  createSendToken(newUser, 201, res);
-});
+
+
+// exports.signUp = catchAsync(async (req, res, next) => {
+//   if(req.body.role ){
+//     return next(new AppError(`You can't set your role manually!,Contact to administration to do so`))
+//   }
+//   const newUser = await User.create(req.body);
+//   createSendToken(newUser, 201, res);
+// });
 
 exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
