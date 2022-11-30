@@ -8,4 +8,10 @@ router
   .route("/")
   .get(bookController.getAllBooks)
   .post(authController.protect, bookController.addBook);
+
+router
+  .route("/:id")
+  .get(bookController.getBook)
+  .patch(authController.protect, bookController.updateBook)
+  .delete(authController.protect, bookController.deleteBook);
 module.exports = router;
