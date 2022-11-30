@@ -11,7 +11,7 @@ const xss = require("xss-clean");
 const hpp = require("hpp");
 
 const errorHandler = require("./handlers/errorHandler");
-const leaseRoute =require('./routes/leaseRoute')
+const leaseRouter =require('./routes/leaseRoute')
 
 const app = express();
 
@@ -42,7 +42,7 @@ app.use(
   }),
 );
 
-app.use('/api/v1/leases',leaseRoute)
+app.use('/api/v1/leases',leaseRouter)
 
 
 app.all('*',(req,res,next)=>{
