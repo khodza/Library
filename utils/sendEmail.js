@@ -2,6 +2,7 @@ const nodemailer = require('nodemailer');
 const catchAsync = require('./catchAsync');
 
 const sendEmail = catchAsync(async (options) => {
+  //TODO
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -11,7 +12,7 @@ const sendEmail = catchAsync(async (options) => {
   });
 
   const mailOptions = {
-    from: 'Aska Team  askateam.shop@gmail.com',
+    from: 'Ajou LIbrary  askateam.shop@gmail.com',
     to: options.email,
     subject: options.subject,
     text: options.message,
