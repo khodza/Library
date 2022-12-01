@@ -1,39 +1,50 @@
 const mongoose = require("mongoose");
 const slugify = require("slugify");
 
-const leaseSchema = new mongoose.Schema({
-  studentName: {
-    type: String,
-    required: [true, `O'quvchining ismini kiriting`],
+const leaseSchema = new mongoose.Schema(
+  {
+    studentName: {
+      type: String,
+      required: [true, `O'quvchining ismini kiriting`],
+    },
+    orderedBook: {
+      type: mongoose.Schema.ObjectId,
+      ref: "Book",
+      required: [true, `Kitob nomini kiriting`],
+    },
+    orderedTime: {
+      type: Date,
+      default: Date.now,
+    },
+    classOfStudent: {
+      type: Number,
+      required: [true, `O'quvchining gurux raqamini qoshing`],
+    },
+    major: {
+      type: String,
+      required: [true, `O'quvchining o'quv yo'nalishini kiriting`],
+      enum: ["Civil", "Electrical", "Architecture"],
+    },
+    deadline: {
+      type: Date,
+    },
+    studentPhoneNumber: {
+      type: String,
+      required: [true, `O'quvchining telefon raqamini kiriting!`],
+    },
+    slug: {
+      type: String,
+    },
   },
-  orderedBook: {
-    type: mongoose.Schema.ObjectId,
-    ref: "Book",
-    required: [true, `Kitob nomini kiriting`],
-  },
-  orderedTime: {
-    type: Date,
-    default: Date.now,
-  },
-  classOfStudent: {
-    type: Number,
-    required: [true, `O'quvchining gurux raqamini qoshing`],
-  },
-  major: {
-    type: String,
-    required: [true, `O'quvchining o'quv yo'nalishini kiriting`],
-    enum: ["Civil", "Electrical", "Architecture"],
-  },
-  deadline: {
-    type: Date,
-  },
-  studentPhoneNumber: {
-    type: String,
-    required: [true, `O'quvchining telefon raqamini kiriting!`],
-  },
-  slug: {
-    type: String,
-  },
+  {
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
+  }
+);
+leaseSchema.index({ slug: 1 });
+
+leaseSchema.virtual("shouldBeReturned").get(function () {
+  return Date.now() > this.deadline;
 });
 
 leaseSchema.pre("save", function (next) {
