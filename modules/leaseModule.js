@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
-// const slugify =require('slugify')
-
-// const User =require('./usersModule')
+const slugify = require("slugify");
 
 const leaseSchema = new mongoose.Schema({
   studentName: {
@@ -23,7 +21,7 @@ const leaseSchema = new mongoose.Schema({
   },
   major: {
     type: String,
-    required: [true, `O'quvchining o'quv yo'nalishini koriting`],
+    required: [true, `O'quvchining o'quv yo'nalishini kiriting`],
     enum: ["Civil", "Electrical", "Architecture"],
   },
   deadline: {
@@ -33,11 +31,18 @@ const leaseSchema = new mongoose.Schema({
     type: String,
     required: [true, `O'quvchining telefon raqamini kiriting!`],
   },
+  slug: {
+    type: String,
+  },
 });
 
 leaseSchema.pre("save", function (next) {
   this.deadline = new Date(
     this.orderedTime.getTime() + 7 * 24 * 60 * 60 * 1000
+  );
+  this.slug = slugify(
+    `${this.studentName} ${this.major} ${this.classOfStudent}`,
+    { lower: true }
   );
   next();
 });
