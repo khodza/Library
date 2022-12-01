@@ -46,6 +46,7 @@ const leaseSchema = new mongoose.Schema(
   }
 );
 leaseSchema.index({ slug: 1 });
+leaseSchema.index({ active: 1 });
 
 leaseSchema.virtual("shouldBeReturned").get(function () {
   return Date.now() > this.deadline;

@@ -17,3 +17,12 @@ exports.deleteLease = catchAsync(async (req, res, next) => {
     message: "Ijara ochirildi",
   });
 });
+exports.getAllDeletedLeases = async (req, res, next) => {
+  const leases = await Lease.aggregate([{ $match: { active: false } }]);
+  res.status(200).json({
+    status: "success",
+    data: {
+      doc: leases,
+    },
+  });
+};
