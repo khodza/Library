@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Менинг кушним миллионер",
+    "author": "Уильям Д.Данко",
+    "year": 2021,
+    "pages": 416,
+    "code": "В-00016",
+    "amount": 20
+  },
+  {
+    "name": "Garry Potter",
+    "author": "J K",
+    "year": 1990,
+    "pages": 320,
+    "code": "В-00017",
+    "amount": 8
+  },
+  {
+    "name": "O'tkan kunlar",
+    "author": "O'tkir Xoshimov",
+    "year": 1989,
+    "pages": 152,
+    "code": "В-00018",
+    "amount": 4
+  },
+  {
+    "name": "Bog'irsoq",
+    "author": "Halq",
+    "year": 1950,
+    "pages": 15,
+    "code": "В-00019",
+    "amount": 10
+  }
+]

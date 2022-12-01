@@ -68,7 +68,7 @@ leaseSchema.pre(/^find/, function (next) {
   next();
 });
 leaseSchema.pre(/^find/, function (next) {
-  this.populate({ path: "orderedBook", select: "year , author" });
+  this.populate({ path: "orderedBook", select: "name ,year , author" });
   next();
 });
 const Lease = mongoose.model("Lease", leaseSchema);
