@@ -23,7 +23,31 @@ exports.addLease = catchAsync(async (req, res, next) => {
     },
   });
 });
-exports.updateLease = handleFactory.updateOne(Lease);
+
+exports.updateLease = catchAsync(async (req, res, next) => {
+  const lease = await Lease.findById(req.params.id);
+  if (!lease) return next(new AppError("Bu ID lik ijara topilmadi!", 404));
+  const oldBook = await Book.findById(lease.orderedBook);
+  if (!oldBook) return next(new AppError("Eski kitob topilmadi!"));
+  const newBook = await Book.findById(req.body.orderedBook);
+  if (!newBook) return next(new AppError("Bu ID bilan yangi kitob topilmadi!"));
+  if (oldBook !== newBook) {
+    oldBook.amount += 1;
+    newBook.amount -= 1;
+    await oldBook.save();
+    await newBook.save();
+  }
+  const doc = await Lease.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true,
+  });
+  res.status(200).json({
+    status: "success",
+    data: {
+      doc,
+    },
+  });
+});
 exports.deleteLease = catchAsync(async (req, res, next) => {
   const lease = await Lease.findById(req.params.id);
   if (!lease) return next(new AppError("Bu ID lik ijara topilmadi!", 404));
