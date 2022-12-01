@@ -27,6 +27,10 @@ exports.updateLease = handleFactory.updateOne(Lease);
 exports.deleteLease = catchAsync(async (req, res, next) => {
   const lease = await Lease.findById(req.params.id);
   if (!lease) return next(new AppError("Bu ID lik ijara topilmadi!", 404));
+  const book = await Book.findById(lease.orderedBook);
+  if (!book) return next(new AppError("Bunday kitob bazada mavjud emas!", 404));
+  book.amount += 1;
+  await book.save();
   lease.active = false;
   await lease.save();
   res.status(200).json({
