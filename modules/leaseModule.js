@@ -8,8 +8,9 @@ const leaseSchema = new mongoose.Schema({
     type: String,
     required: [true, `O'quvchining ismini kiriting`],
   },
-  ordredBook: {
-    type: String,
+  orderedBook: {
+    type: mongoose.Schema.ObjectId,
+    ref: "Book",
     required: [true, `Kitob nomini kiriting`],
   },
   orderedTime: {
@@ -38,6 +39,11 @@ leaseSchema.pre("save", function (next) {
   this.deadline = new Date(
     this.orderedTime.getTime() + 7 * 24 * 60 * 60 * 1000
   );
+  next();
+});
+
+leaseSchema.pre(/^find/, function (next) {
+  this.populate({ path: "orderedBook", select: "year , author" });
   next();
 });
 const Lease = mongoose.model("Lease", leaseSchema);
