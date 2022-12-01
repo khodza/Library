@@ -35,6 +35,10 @@ const leaseSchema = new mongoose.Schema(
     slug: {
       type: String,
     },
+    active: {
+      type: Boolean,
+      default: true,
+    },
   },
   {
     toJSON: { virtuals: true },
@@ -58,6 +62,10 @@ leaseSchema.pre("save", function (next) {
   next();
 });
 
+leaseSchema.pre(/^find/, function (next) {
+  this.find({ active: { $ne: false } });
+  next();
+});
 leaseSchema.pre(/^find/, function (next) {
   this.populate({ path: "orderedBook", select: "year , author" });
   next();
