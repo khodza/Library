@@ -56,6 +56,7 @@ exports.deleteLease = catchAsync(async (req, res, next) => {
   book.amount += 1;
   await book.save();
   lease.active = false;
+  lease.deletedAt = Date.now();
   await lease.save();
   res.status(200).json({
     status: "success",
@@ -71,3 +72,15 @@ exports.getAllDeletedLeases = async (req, res, next) => {
     },
   });
 };
+exports.deleteHistory = catchAsync(async (req, res, next) => {
+  await Lease.deleteMany({
+    active: false,
+    deletedAt: {
+      $lte: new Date(Date.now() - 365 * 24 * 60 * 60 * 1000).getTime(),
+    },
+  });
+  res.status(200).json({
+    status: "success",
+    message: "Bir yillik ijara tarixi o'chirildi",
+  });
+});

@@ -5,7 +5,10 @@ const authController = require("../controllers/authController");
 const router = express.Router();
 router.use(authController.protect);
 
-router.route("/history").get(leasesController.getAllDeletedLeases);
+router
+  .route("/history")
+  .get(leasesController.getAllDeletedLeases)
+  .delete(leasesController.deleteHistory);
 router
   .route("/")
   .get(leasesController.getAllLeases)

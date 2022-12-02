@@ -39,6 +39,9 @@ const leaseSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    deletedAt: {
+      type: Date,
+    },
   },
   {
     toJSON: { virtuals: true },
