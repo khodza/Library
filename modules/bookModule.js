@@ -19,8 +19,9 @@ const bookSchema = new mongoose.Schema({
   wb_code: {
     type: String,
   },
-  code: {
-    type: String,
+  codes: {
+    type: [String],
+    required: [true, "Kitobning Seria raqamini kiriting!"],
   },
   get_from: {
     type: String,
@@ -32,7 +33,6 @@ const bookSchema = new mongoose.Schema({
     type: Number,
     default: 1,
   },
- 
 });
 
 const Book = mongoose.model("Book", bookSchema);

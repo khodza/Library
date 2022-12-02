@@ -73,7 +73,7 @@ leaseSchema.pre(/^find/, function (next) {
 leaseSchema.pre(/^find/, function (next) {
   this.populate({
     path: "orderedBook",
-    select: ["year", "name", "author", "code"],
+    select: ["year", "name", "author", "codes"],
   });
   next();
 });
