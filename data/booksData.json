@@ -1,5 +1,6 @@
 [
   {
+    "_id": "6389c809666ce69a7f92ffa9",
     "name": "Менинг кушним миллионер",
     "author": "Уильям Д.Данко",
     "year": 2021,
@@ -8,6 +9,7 @@
     "amount": 20
   },
   {
+    "_id": "6389c809666ce69a7f92ffaa",
     "name": "Garry Potter",
     "author": "J K",
     "year": 1990,
@@ -16,6 +18,7 @@
     "amount": 8
   },
   {
+    "_id": "6389c809666ce69a7f92ffab",
     "name": "O'tkan kunlar",
     "author": "O'tkir Xoshimov",
     "year": 1989,
@@ -24,6 +27,7 @@
     "amount": 4
   },
   {
+    "_id": "6389c809666ce69a7f92ffac",
     "name": "Bog'irsoq",
     "author": "Halq",
     "year": 1950,

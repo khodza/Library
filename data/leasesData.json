@@ -1,22 +1,22 @@
 [
   {
     "studentName": "Jamshid Toshov",
-    "orderedBook": "6387b6c2a8014138812f7685",
-    "classOfStudent": 201,
+    "orderedBook": "6389c809666ce69a7f92ffa9",
+    "classOfStudent": "204C",
     "major": "Civil",
     "studentPhoneNumber": "+998945414635"
   },
   {
     "studentName": "Izzat Makhmudkhodzaev",
-    "orderedBook": "6387b6c2a8014138812f7685",
-    "classOfStudent": 201,
+    "orderedBook": "6389c809666ce69a7f92ffaa",
+    "classOfStudent": "201E",
     "major": "Electrical",
     "studentPhoneNumber": "+998977622003"
   },
   {
     "studentName": "Abror Ahmedov",
-    "orderedBook": "6387b6c2a8014138812f7685",
-    "classOfStudent": 201,
+    "orderedBook": "6389c809666ce69a7f92ffab",
+    "classOfStudent": "201A",
     "major": "Architecture",
     "studentPhoneNumber": "+998931656779"
   }

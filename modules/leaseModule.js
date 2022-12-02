@@ -17,7 +17,7 @@ const leaseSchema = new mongoose.Schema(
       default: Date.now,
     },
     classOfStudent: {
-      type: Number,
+      type: String,
       required: [true, `O'quvchining gurux raqamini qoshing`],
     },
     major: {
