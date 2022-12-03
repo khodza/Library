@@ -2,6 +2,7 @@ const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const Features = require("../utils/features");
 const User = require("../modules/usersModule");
+const Book = require("../modules/bookModule");
 
 exports.createOne = (Model) =>
   catchAsync(async (req, res, next) => {
@@ -52,6 +53,14 @@ exports.getOne = (Model) =>
 
 exports.updateOne = (Model) =>
   catchAsync(async (req, res, next) => {
+    if (Model === Book && req.body.codes) {
+      return next(
+        new AppError(
+          `Kitobning serialarini o'zgartirish uchun boshqa route dan foidalaning!`,
+          400
+        )
+      );
+    }
     const doc = await Model.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true,
@@ -62,6 +71,7 @@ exports.updateOne = (Model) =>
       await doc.save({ validateBeforeSave: false });
       doc.password = undefined;
     }
+
     if (!doc) {
       return next(new AppError("Document with given ID not found!", 404));
     }

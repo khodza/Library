@@ -1,3 +1,7 @@
 //dublicate code 
 
 orderedBook remove pop on lease
+
+
+add reference between book to lease
+EXp:smone read this book

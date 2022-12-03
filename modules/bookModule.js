@@ -22,7 +22,13 @@ const bookSchema = new mongoose.Schema(
     cd_disk: {
       type: String,
     },
-    codes: [{ type: String, unique: true }],
+    codes: [
+      {
+        type: String,
+        unique: true,
+        required: [true, "Kitob serialarini qoshing!"],
+      },
+    ],
     get_options: {
       type: String,
     },
@@ -40,7 +46,6 @@ const bookSchema = new mongoose.Schema(
 );
 
 bookSchema.virtual("amount").get(function () {
-  console.log(this.codes);
   return this.codes.length;
 });
 bookSchema.plugin(arrayUniquePlugin);

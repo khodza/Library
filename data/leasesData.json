@@ -2,6 +2,7 @@
   {
     "studentName": "Jamshid Toshov",
     "orderedBook": "6389c809666ce69a7f92ffa9",
+    "orderedBookSeria": "CH-00116",
     "classOfStudent": "C-203",
     "major": "Civil",
     "studentPhoneNumber": "+998945414635"
@@ -9,6 +10,7 @@
   {
     "studentName": "Izzat Makhmudkhodzaev",
     "orderedBook": "6389c809666ce69a7f92ffaa",
+    "orderedBookSeria": "CH-00018",
     "classOfStudent": "E-201",
     "major": "Electrical",
     "studentPhoneNumber": "+998977622003"
@@ -16,6 +18,7 @@
   {
     "studentName": "Abror Ahmedov",
     "orderedBook": "6389c809666ce69a7f92ffab",
+    "orderedBookSeria": "CH-00035",
     "classOfStudent": "A-203",
     "major": "Architecture",
     "studentPhoneNumber": "+998931656779"

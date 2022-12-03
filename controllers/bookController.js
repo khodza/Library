@@ -14,7 +14,6 @@ exports.addBookCopy = catchAsync(async (req, res, next) => {
     return next(
       new AppError(`Bu serialik ${matchings} kitoblar bazada mavjud!`)
     );
-  console.log(matchings);
   bookCodes.forEach((code) => {
     book.codes.push(code);
   });
@@ -45,6 +44,6 @@ exports.deleteBookCopy = catchAsync(async (req, res, next) => {
     },
   });
 });
-exports.getBook = handleFactory.getOne(Book);
 exports.updateBook = handleFactory.updateOne(Book);
+exports.getBook = handleFactory.getOne(Book);
 exports.deleteBook = handleFactory.deleteOne(Book);
