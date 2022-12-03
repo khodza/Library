@@ -12,6 +12,10 @@ const leaseSchema = new mongoose.Schema(
       ref: "Book",
       required: [true, `Kitob nomini kiriting`],
     },
+    orderedBookSeria: {
+      type: String,
+      required: [true, `Kitob seriasini kiriting!`],
+    },
     orderedTime: {
       type: Date,
       default: Date.now,

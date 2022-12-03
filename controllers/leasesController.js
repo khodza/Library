@@ -12,7 +12,13 @@ exports.addLease = catchAsync(async (req, res, next) => {
   if (book.amount <= 0) {
     return next(new AppError("Bu kitob kutubxonada qolmagan!", 404));
   }
-  book.amount -= 1;
+  const orderedBookSeria = req.body.orderedBookSeria;
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < book.codes.length; i++) {
+    if (book.codes[i] === orderedBookSeria) {
+      book.codes.splice(i, 1);
+    }
+  }
   await book.save();
 
   const doc = await Lease.create(req.body);
@@ -53,7 +59,8 @@ exports.deleteLease = catchAsync(async (req, res, next) => {
   if (!lease) return next(new AppError("Bu ID lik ijara topilmadi!", 404));
   const book = await Book.findById(lease.orderedBook);
   if (!book) return next(new AppError("Bunday kitob bazada mavjud emas!", 404));
-  book.amount += 1;
+  const orderedBookSeria = lease.orderedBookSeria;
+  book.codes.push(orderedBookSeria);
   await book.save();
   lease.active = false;
   lease.deletedAt = Date.now();
