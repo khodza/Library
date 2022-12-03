@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+const arrayUniquePlugin = require("mongoose-unique-array");
+
 const bookSchema = new mongoose.Schema(
   {
     name: {
@@ -17,18 +19,18 @@ const bookSchema = new mongoose.Schema(
       type: Number,
       required: [true, `Kitob betlari sonini kiriting`],
     },
-    wb_code: {
+    cd_disk: {
       type: String,
     },
-    codes: {
-      type: [String],
-      required: [true, "Kitobning Seria raqamini kiriting!"],
-    },
-    get_from: {
+    codes: [{ type: String, unique: true }],
+    get_options: {
       type: String,
     },
     price: {
-      type: Number,
+      type: String,
+    },
+    lang: {
+      type: String,
     },
   },
   {
@@ -41,6 +43,6 @@ bookSchema.virtual("amount").get(function () {
   console.log(this.codes);
   return this.codes.length;
 });
-
+bookSchema.plugin(arrayUniquePlugin);
 const Book = mongoose.model("Book", bookSchema);
 module.exports = Book;

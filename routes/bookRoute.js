@@ -14,4 +14,9 @@ router
   .get(bookController.getBook)
   .patch(authController.protect, bookController.updateBook)
   .delete(authController.protect, bookController.deleteBook);
+
+router
+  .route("/amount/:id")
+  .patch(authController.protect, bookController.addBookCopy)
+  .delete(authController.protect, bookController.deleteBookCopy);
 module.exports = router;
