@@ -27,7 +27,7 @@ const leaseSchema = new mongoose.Schema(
     major: {
       type: String,
       required: [true, `O'quvchining o'quv yo'nalishini kiriting`],
-      enum: ["Civil", "Electrical", "Architecture"],
+      enum: ["Civil", "ECE", "Architecture"],
     },
     deadline: {
       type: Date,
