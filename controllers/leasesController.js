@@ -71,7 +71,10 @@ exports.deleteLease = catchAsync(async (req, res, next) => {
   });
 });
 exports.getAllDeletedLeases = async (req, res, next) => {
-  const leases = await Lease.aggregate([{ $match: { active: false } }]);
+  const leases = await Lease.aggregate([
+    { $match: { active: false } },
+    { $sort: { deletedAt: -1 } },
+  ]);
   await Book.populate(leases, {
     path: "orderedBook",
     select: ["year", "name", "author"],
