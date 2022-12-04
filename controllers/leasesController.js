@@ -74,7 +74,7 @@ exports.getAllDeletedLeases = async (req, res, next) => {
   const leases = await Lease.aggregate([{ $match: { active: false } }]);
   await Book.populate(leases, {
     path: "orderedBook",
-    select: ["year", "name", "author", "codes"],
+    select: ["year", "name", "author"],
   });
   res.status(200).json({
     status: "success",

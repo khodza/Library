@@ -46,6 +46,7 @@ const bookSchema = new mongoose.Schema(
 );
 
 bookSchema.virtual("amount").get(function () {
+  if (!this.codes) return null;
   return this.codes.length;
 });
 bookSchema.plugin(arrayUniquePlugin);
