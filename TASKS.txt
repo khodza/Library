@@ -1,8 +1,7 @@
 //dublicate code 
 history populate
 orderedBook remove pop on lease
-major type
-
+sorting array lease 
 
 add reference between book to lease
 EXp:smone read this book
