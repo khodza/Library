@@ -1,10 +1,13 @@
 const mongoose = require("mongoose");
 
 const arrayUniquePlugin = require("mongoose-unique-array");
+const _ = require("underscore");
+const AppError = require("../utils/appError");
 
 const bookSchema = new mongoose.Schema(
   {
     name: {
+      unique: true,
       type: String,
       required: [true, `Kitob nomini kiriting`],
     },
@@ -25,7 +28,7 @@ const bookSchema = new mongoose.Schema(
     codes: [
       {
         type: String,
-        unique: true,
+        unique: [true, "dublicate errror"],
         required: [true, "Kitob serialarini qoshing!"],
       },
     ],
@@ -45,10 +48,15 @@ const bookSchema = new mongoose.Schema(
   }
 );
 
+bookSchema.pre("save", function (next) {
+  if (this.codes === _.uniq(this.codes)) next();
+  next(new AppError("Birxil serialik kitob kiritish mumkun emas", 400));
+});
+
 bookSchema.virtual("amount").get(function () {
   if (!this.codes) return null;
   return this.codes.length;
 });
-bookSchema.plugin(arrayUniquePlugin);
+// bookSchema.plugin(arrayUniquePlugin);
 const Book = mongoose.model("Book", bookSchema);
 module.exports = Book;

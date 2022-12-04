@@ -29,6 +29,7 @@
 		"nodemon": "^2.0.20",
 		"password-validator": "^5.3.0",
 		"slugify": "^1.6.5",
+		"underscore": "^1.13.6",
 		"validator": "^13.7.0",
 		"xss-clean": "^0.1.1"
 	},
