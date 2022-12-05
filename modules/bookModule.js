@@ -40,6 +40,10 @@ const bookSchema = new mongoose.Schema(
     lang: {
       type: String,
     },
+    addedAt: {
+      type: Date,
+      default: Date.now,
+    },
   },
   {
     toJSON: { virtuals: true },
