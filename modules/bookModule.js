@@ -48,7 +48,8 @@ const bookSchema = new mongoose.Schema(
 );
 
 bookSchema.pre("save", function (next) {
-  if (this.codes === _.uniq(this.codes)) next();
+  if (JSON.stringify(this.codes) === JSON.stringify(_.uniq(this.codes))) next();
+
   next(new AppError("Birxil serialik kitob kiritish mumkun emas", 400));
 });
 
