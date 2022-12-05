@@ -70,10 +70,10 @@ leaseSchema.pre("save", function (next) {
   next();
 });
 
-// leaseSchema.pre(/^find/, function (next) {
-//   this.find({ active: { $ne: false } });
-//   next();
-// });
+leaseSchema.pre(/^find/, function (next) {
+  this.find({ active: { $ne: false } });
+  next();
+});
 leaseSchema.pre(/^find/, function (next) {
   this.populate({
     path: "orderedBook",
