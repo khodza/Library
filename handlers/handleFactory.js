@@ -25,9 +25,13 @@ exports.getAll = (Model) =>
       .paginate();
 
     const doc = await features.query;
-
+    let maxPage = (await Model.find().count()) / doc.length;
+    if (!Number.isInteger(maxPage)) {
+      maxPage = Math.round(maxPage) + 1;
+    }
     res.status(200).json({
       status: "success",
+      maxPage,
       result: doc.length,
       data: {
         doc,

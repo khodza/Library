@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-const arrayUniquePlugin = require("mongoose-unique-array");
 const _ = require("underscore");
 const AppError = require("../utils/appError");
 
@@ -57,6 +56,5 @@ bookSchema.virtual("amount").get(function () {
   if (!this.codes) return null;
   return this.codes.length;
 });
-// bookSchema.plugin(arrayUniquePlugin);
 const Book = mongoose.model("Book", bookSchema);
 module.exports = Book;
