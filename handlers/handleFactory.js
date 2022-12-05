@@ -25,7 +25,7 @@ exports.getAll = (Model) =>
       .paginate();
 
     const doc = await features.query;
-    let maxPage = (await Model.find().count()) / doc.length;
+    let maxPage = (await Model.find().count()) / req.query.limit;
     if (!Number.isInteger(maxPage)) {
       maxPage = Math.floor(maxPage) + 1;
     }
