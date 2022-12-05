@@ -19,7 +19,7 @@ class Features {
       const sortBy = this.queryString.sort.split(",").join(" ");
       this.query = this.query.sort(sortBy);
     } else {
-      this.query = this.query.sort("-orderedTime").sort("-addedAt");
+      this.query = this.query.sort({ orderedTime: -1, addedAt: -1 });
     }
     return this;
   }
