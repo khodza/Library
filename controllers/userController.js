@@ -1,11 +1,16 @@
-const User = require('../modules/usersModule');
-const handleFactory = require('../handlers/handleFactory');
-const catchAsync = require('../utils/catchAsync');
-const AppError = require('../utils/appError');
+const User = require("../modules/usersModule");
+const handleFactory = require("../handlers/handleFactory");
+const catchAsync = require("../utils/catchAsync");
+const AppError = require("../utils/appError");
 
 exports.updateMe = catchAsync(async (req, res, next) => {
   if (req.body.password || req.body.passwordConfirm) {
-    return next(new AppError('In order change your password use /updatePassword', 400));
+    return next(
+      new AppError(
+        "Parolni o'zgartirish uchun  /updatePassword ga so'rov yuboring",
+        400
+      )
+    );
   }
   req.params.id = req.user.id;
   next();

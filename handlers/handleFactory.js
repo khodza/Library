@@ -45,7 +45,7 @@ exports.getOne = (Model) =>
     // Should add popOptions for comments ,products, reviews
     const doc = await Model.findById(req.params.id);
     if (!doc) {
-      return next(new AppError("Document with given ID not found", 404));
+      return next(new AppError("Bu ID lik dakument topilmadi!", 404));
     }
     res.status(200).json({
       status: "success",
@@ -77,7 +77,7 @@ exports.updateOne = (Model) =>
     }
 
     if (!doc) {
-      return next(new AppError("Document with given ID not found!", 404));
+      return next(new AppError("Bu ID lik dakument topilmadi!!", 404));
     }
 
     res.status(200).json({
@@ -92,7 +92,7 @@ exports.deleteOne = (Model) =>
   catchAsync(async (req, res, next) => {
     const doc = await Model.findByIdAndDelete(req.params.id);
     if (!doc) {
-      return next(new AppError("Document with given ID not found"));
+      return next(new AppError("Bu ID lik dakument topilmadi!"));
     }
     res.status(204).json({
       status: "deleted",

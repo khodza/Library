@@ -12,7 +12,7 @@ const bookSchema = new mongoose.Schema(
     },
     author: {
       type: String,
-      required: [true, `Kitob avtorini kiriting`],
+      required: [true, `Kitob muallifini kiriting`],
     },
     year: {
       type: Number,

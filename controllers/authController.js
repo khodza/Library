@@ -42,11 +42,11 @@ exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
   // 1)  Checking Email and Password
   if (!email || !password) {
-    return next(new AppError("Provide email and password"));
+    return next(new AppError("Email va Parolni ni kiriting"));
   }
   const user = await User.findOne({ email }).select("+password");
   if (!user || !(await user.correctPassword(password, user.password))) {
-    return next(new AppError("Invalid password or email", 401));
+    return next(new AppError("Xato parol yoki email", 401));
   }
   createSendToken(user, 200, res);
 });
@@ -64,7 +64,7 @@ exports.protect = catchAsync(async (req, res, next) => {
   }
 
   if (!token) {
-    return next(new AppError("You are not logged in", 401));
+    return next(new AppError("Siz log in qilmagansiz!", 401));
   }
 
   const decoded = await util.promisify(jwt.verify)(
@@ -75,16 +75,17 @@ exports.protect = catchAsync(async (req, res, next) => {
   const currentUser = await User.findById(decoded.id);
 
   if (!currentUser) {
-    return next(
-      new AppError("The user belonging to this token no longer exist!", 401)
-    );
+    return next(new AppError("Bu tokenga tegishli faydalanuvchi mavjud emas!", 401));
   }
 
   // 4) Check if user changed password after token was issued
 
   if (currentUser.changedPasswordAfter(decoded.iat)) {
     return next(
-      new AppError("User recently changed password! Please log in again", 401)
+      new AppError(
+        "Foydalanuvchi yaqinda parolni o'zgartirdi.Iltimos qayta log in qiling ",
+        401
+      )
     );
   }
   req.user = currentUser;
@@ -95,7 +96,7 @@ exports.restrictTo = function (...roles) {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {
       return next(
-        new AppError("You are not allowed to perform this action", 403)
+        new AppError("Sizga bu harakatni bajarish taqiqlangan!", 403)
       );
     }
     next();
@@ -105,7 +106,7 @@ exports.restrictTo = function (...roles) {
 exports.updateMyPassword = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.user.id).select("+password");
   if (!(await user.correctPassword(req.body.passwordCurrent, user.password))) {
-    return next(new AppError("Your current password is wrong!", 400));
+    return next(new AppError("Hozirgi parolingiz xato!", 400));
   }
   user.password = req.body.password;
   user.passwordConfirm = req.body.passwordConfirm;
@@ -117,7 +118,7 @@ exports.updateMyPassword = catchAsync(async (req, res, next) => {
 exports.forgotPassword = catchAsync(async (req, res, next) => {
   const user = await User.findOne({ email: req.body.email });
   if (!user) {
-    return next(new AppError("User with this email not found!", 404));
+    return next(new AppError("Bu email bilan foydalanuvchi topilmadi!", 404));
   }
   const resetToken = user.createResetToken();
   // console.log(user);
@@ -126,18 +127,18 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
   const resetUrl = `${req.protocol}://${req.get(
     "host"
   )}/api/v1/users/resetpassword/${resetToken}`;
-  const message = `Forgot password? Submit a PATCH request with your new password and passwordConfirm to : ${resetUrl}\nIf you did not forget your password ,please ignore this email!`;
+  const message = `Parolni unutdingizmi? Shu URL ga PATCH so'rovini yuboring, va yangi parol kiritib uni tasdiqlang : ${resetUrl}\nAgar parolni unutmagan bo'lsangiz bu emailga etibor bermang!`;
 
   try {
     await sendEmail({
       email: user.email,
-      subject: "Your password reset token (valid for 10 min)",
+      subject: " Sizning parolingizi yangilash uchun token(10 daqiqagacha yaroqli)",
       message,
     });
 
     res.status(200).json({
       status: "success",
-      message: "Token sent to email!",
+      message: "Token jo'natildi!",
     });
   } catch (err) {
     user.passwordResetToken = undefined;
@@ -146,7 +147,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
     return next(
       new AppError(
-        "There was an error sending email.Please try again later!",
+        "Email jo'natishta hatolik.Iltimos keyinroq harakat qiling!",
         500
       )
     );
@@ -165,7 +166,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
   });
 
   if (!user) {
-    return next(new AppError("Invalid token or its already has been expired!"));
+    return next(new AppError("Yaroqsiz token yoki muddati o'tkan token!"));
   }
   user.password = req.body.password;
   user.passwordConfirm = req.body.passwordConfirm;

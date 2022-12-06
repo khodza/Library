@@ -1,7 +1,5 @@
 //dublicate code 
 
 
-add book delete book 
-seria validation!
 add reference between book to lease
 EXp:smone read this book
