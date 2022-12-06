@@ -1,8 +1,10 @@
 //dublicate code 
 
 learn facet 
-bug pagination all leases
 
+
+
+uniq seria of books
 
 add reference between book to lease
 EXp:smone read this book

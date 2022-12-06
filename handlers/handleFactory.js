@@ -3,6 +3,7 @@ const AppError = require("../utils/appError");
 const Features = require("../utils/features");
 const User = require("../modules/usersModule");
 const Book = require("../modules/bookModule");
+const getMaxPage = require("../utils/maxPage");
 
 exports.createOne = (Model) =>
   catchAsync(async (req, res, next) => {
@@ -25,21 +26,7 @@ exports.getAll = (Model) =>
       .paginate();
 
     const doc = await features.query;
-    const total = await Model.aggregate([
-      { $match: { active: true } },
-      { $sort: { deletedAt: -1 } },
-      { $group: { _id: null, count: { $sum: 1 } } },
-      { $project: { _id: 0 } },
-    ]);
-    let maxPage;
-    if (total.length === 0) {
-      maxPage = 1;
-    } else {
-      maxPage = total[0].count / req.query.limit;
-      if (!Number.isInteger(maxPage)) {
-        maxPage = Math.floor(maxPage) + 1;
-      }
-    }
+    const maxPage = await getMaxPage(Model, { active: true }, req);
     res.status(200).json({
       status: "success",
       maxPage,
