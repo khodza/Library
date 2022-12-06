@@ -74,6 +74,12 @@ exports.getAllDeletedLeases = async (req, res, next) => {
   const page = req.query.page * 1 || 1;
   const limit = req.query.limit * 1 || 100;
   const skip = (page - 1) * limit;
+  const total = await Lease.aggregate([
+    { $match: { active: false } },
+    { $sort: { deletedAt: -1 } },
+    { $group: { _id: null, count: { $sum: 1 } } },
+    { $project: { _id: 0 } },
+  ]);
   const leases = await Lease.aggregate([
     { $match: { active: false } },
     { $sort: { deletedAt: -1 } },
@@ -84,8 +90,19 @@ exports.getAllDeletedLeases = async (req, res, next) => {
     path: "orderedBook",
     select: ["year", "name", "author"],
   });
+  console.log(total);
+  let maxPage;
+  if (total.length === 0) {
+    maxPage = 1;
+  } else {
+    maxPage = total[0].count / req.query.limit;
+    if (!Number.isInteger(maxPage)) {
+      maxPage = Math.floor(maxPage) + 1;
+    }
+  }
   res.status(200).json({
     status: "success",
+    maxPage,
     results: leases.length,
     data: {
       doc: leases,

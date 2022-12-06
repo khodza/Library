@@ -1,5 +1,8 @@
 //dublicate code 
 
+learn facet 
+bug pagination all leases
+
 
 add reference between book to lease
 EXp:smone read this book
