@@ -33,6 +33,7 @@
 		"slugify": "^1.6.5",
 		"underscore": "^1.13.6",
 		"validator": "^13.7.0",
+		"xlsx": "^0.18.5",
 		"xss-clean": "^0.1.1"
 	},
 	"devDependencies": {

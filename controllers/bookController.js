@@ -1,3 +1,4 @@
+const XLSX = require("xlsx");
 const handleFactory = require("../handlers/handleFactory");
 const Book = require("../modules/bookModule");
 const AppError = require("../utils/appError");
@@ -71,3 +72,15 @@ exports.getBook = catchAsync(async (req, res, next) => {
   });
 });
 exports.deleteBook = handleFactory.deleteOne(Book);
+
+exports.download = catchAsync(async (req, res, next) => {
+  const wb = XLSX.utils.book_new(); //new workbook
+  const data = await Book.find();
+  let temp = JSON.stringify(data);
+  temp = JSON.parse(temp);
+  const ws = XLSX.utils.json_to_sheet(temp);
+  const down = `${__dirname}/public/exportdata.xlsx`;
+  XLSX.utils.book_append_sheet(wb, ws, "sheet1");
+  XLSX.writeFile(wb, down);
+  res.download(down);
+});

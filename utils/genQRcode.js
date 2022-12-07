@@ -6,6 +6,7 @@ const genQrCode = async (bookID) => {
     return qrcode;
   } catch (err) {
     console.log(err);
+    throw new Error("QR-code generatysa qilinmadi");
   }
 };
 

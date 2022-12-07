@@ -9,6 +9,8 @@ router
   .get(bookController.getAllBooks)
   .post(authController.protect, bookController.addBook);
 
+router.route("/download").get(authController.protect, bookController.download);
+
 router
   .route("/:id")
   .get(bookController.getBook)
