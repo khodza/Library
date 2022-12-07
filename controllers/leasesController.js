@@ -107,3 +107,8 @@ exports.deleteHistory = catchAsync(async (req, res, next) => {
     message: "Bir yillik ijara tarixi o'chirildi",
   });
 });
+
+exports.downloadAllLeases = handleFactory.downloadExel(
+  Lease,
+  "barcha-ijaralar.xlsx"
+);

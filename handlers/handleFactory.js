@@ -1,3 +1,5 @@
+const XLSX = require("xlsx");
+const path = require("path");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const Features = require("../utils/features");
@@ -96,4 +98,17 @@ exports.deleteOne = (Model) =>
       status: "deleted",
       data: null,
     });
+  });
+
+exports.downloadExel = (Model, fileName) =>
+  catchAsync(async (req, res, next) => {
+    const wb = XLSX.utils.book_new(); //new workbook
+    const data = await Model.find().select(["-_id", "-__v", "-id"]);
+    let temp = JSON.stringify(data);
+    temp = JSON.parse(temp);
+    const ws = XLSX.utils.json_to_sheet(temp);
+    const down = path.join(__dirname, `../data/exel-docs/${fileName}`);
+    XLSX.utils.book_append_sheet(wb, ws, "sheet1");
+    XLSX.writeFile(wb, down);
+    res.download(down);
   });
