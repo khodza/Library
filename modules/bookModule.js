@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const _ = require("underscore");
 const AppError = require("../utils/appError");
-const catchAsync = require("../utils/catchAsync");
+const genQrCode = require("../utils/genQRcode");
 
 const bookSchema = new mongoose.Schema(
   {
@@ -61,8 +61,13 @@ bookSchema.virtual("amount").get(function () {
   return this.codes.length;
 });
 
-bookSchema.methods.qrcode = catchAsync(async function () {
-  return await genQrCode(this.id);
-});
+bookSchema.methods.qrcode = async function () {
+  try {
+    const qr = await genQrCode(this.id);
+    return qr;
+  } catch (err) {
+    throw new Error("QR code yaratshta xatolik yuz berdi!");
+  }
+};
 const Book = mongoose.model("Book", bookSchema);
 module.exports = Book;
