@@ -6,7 +6,7 @@ const catchAsync = require("../utils/catchAsync");
 const getMaxPage = require("../utils/maxPage");
 
 exports.getAllLeases = handleFactory.getAll(Lease);
-exports.getLease = handleFactory.getOne(Lease);
+exports.getLease = handleFactory.getOne(Lease, { active: true });
 exports.addLease = catchAsync(async (req, res, next) => {
   const book = await Book.findById(req.body.orderedBook);
   if (!book) return next(new AppError("Bunday kitob bazada mavjud emas!", 404));

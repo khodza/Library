@@ -17,7 +17,7 @@ exports.createOne = (Model) =>
     });
   });
 
-exports.getAll = (Model) =>
+exports.getAll = (Model, matchParam) =>
   catchAsync(async (req, res, next) => {
     const features = new Features(Model.find(), req.query)
       .filter()
@@ -26,7 +26,7 @@ exports.getAll = (Model) =>
       .paginate();
 
     const doc = await features.query;
-    const maxPage = await getMaxPage(Model, { active: true }, req);
+    const maxPage = await getMaxPage(Model, matchParam, req);
     res.status(200).json({
       status: "success",
       maxPage,

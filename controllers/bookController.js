@@ -4,7 +4,7 @@ const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 const genQrCode = require("../utils/genQRcode");
 
-exports.getAllBooks = handleFactory.getAll(Book);
+exports.getAllBooks = handleFactory.getAll(Book, { _id: { $exists: true } });
 // exports.addBook = handleFactory.createOne(Book);
 exports.addBook = catchAsync(async (req, res, next) => {
   const doc = await Book.create(req.body);
