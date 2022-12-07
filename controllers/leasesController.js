@@ -71,7 +71,7 @@ exports.deleteLease = catchAsync(async (req, res, next) => {
     message: "Ijara ochirildi",
   });
 });
-exports.getAllDeletedLeases = async (req, res, next) => {
+exports.getAllDeletedLeases = catchAsync(async (req, res, next) => {
   const page = req.query.page * 1 || 1;
   const limit = req.query.limit * 1 || 100;
   const skip = (page - 1) * limit;
@@ -94,7 +94,7 @@ exports.getAllDeletedLeases = async (req, res, next) => {
       doc: leases,
     },
   });
-};
+});
 exports.deleteHistory = catchAsync(async (req, res, next) => {
   await Lease.deleteMany({
     active: false,
