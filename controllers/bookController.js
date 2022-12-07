@@ -2,18 +2,16 @@ const handleFactory = require("../handlers/handleFactory");
 const Book = require("../modules/bookModule");
 const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
-const genQrCode = require("../utils/genQRcode");
 
 exports.getAllBooks = handleFactory.getAll(Book, { _id: { $exists: true } });
-// exports.addBook = handleFactory.createOne(Book);
 exports.addBook = catchAsync(async (req, res, next) => {
   const doc = await Book.create(req.body);
-  const qrcode = await genQrCode(doc.id.toString());
+  const qrCode = await doc.qrcode();
   res.status(200).json({
     status: "success",
     data: {
       doc,
-      qrcode,
+      qrCode,
     },
   });
 });
@@ -57,5 +55,19 @@ exports.deleteBookCopy = catchAsync(async (req, res, next) => {
   });
 });
 exports.updateBook = handleFactory.updateOne(Book);
-exports.getBook = handleFactory.getOne(Book);
+// exports.getBook = handleFactory.getOne(Book);
+exports.getBook = catchAsync(async (req, res, next) => {
+  const doc = await Book.findById(req.params.id);
+  if (!doc) {
+    return next(new AppError("Bu ID lik dakument topilmadi!", 404));
+  }
+  const qrCode = await doc.qrcode();
+  res.status(200).json({
+    status: "success",
+    data: {
+      doc,
+      qrCode,
+    },
+  });
+});
 exports.deleteBook = handleFactory.deleteOne(Book);
