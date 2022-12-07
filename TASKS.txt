@@ -3,7 +3,7 @@
 learn facet 
 
 
-
+model.exports =exports
 uniq seria of books
 
 add reference between book to lease

@@ -27,7 +27,6 @@ const bookSchema = new mongoose.Schema(
     codes: [
       {
         type: String,
-        unique: [true, "dublicate errror"],
         required: [true, "Kitob serialarini qoshing!"],
       },
     ],

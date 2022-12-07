@@ -2,9 +2,21 @@ const handleFactory = require("../handlers/handleFactory");
 const Book = require("../modules/bookModule");
 const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
+const genQrCode = require("../utils/genQRcode");
 
 exports.getAllBooks = handleFactory.getAll(Book);
-exports.addBook = handleFactory.createOne(Book);
+// exports.addBook = handleFactory.createOne(Book);
+exports.addBook = catchAsync(async (req, res, next) => {
+  const doc = await Book.create(req.body);
+  const qrcode = await genQrCode(doc.id.toString());
+  res.status(200).json({
+    status: "success",
+    data: {
+      doc,
+      qrcode,
+    },
+  });
+});
 exports.addBookCopy = catchAsync(async (req, res, next) => {
   const book = await Book.findById(req.params.id);
   const bookCodes = req.body.codes;

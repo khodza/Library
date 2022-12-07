@@ -1,9 +1,9 @@
 const QRCode = require("qrcode");
-
 const catchAsync = require("./catchAsync");
 
-exports.genQr = catchAsync(async (jsonObj) => {
-  const strObj = JSON.stringify(jsonObj);
-  const qrcode = await QRCode.toDataURL(strObj);
+const genQrCode = catchAsync(async (bookID) => {
+  const qrcode = await QRCode.toDataURL(bookID);
   return qrcode;
 });
+
+module.exports = genQrCode;
