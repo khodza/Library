@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const _ = require("underscore");
 const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
-const genQrCode = require("../utils/genQRcode");
 
 const bookSchema = new mongoose.Schema(
   {
