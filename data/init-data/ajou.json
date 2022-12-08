@@ -1,0 +1,812 @@
+[
+    {
+        "image": "/img/anonymous.png",
+        "id": 10,
+        "full_id": 202090294,
+        "full_name": "ASADOV ELSHOD DILSHOD UGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99897 388 37 31"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/EvB1UfV77Dlfn3aoIoJIb2rd0vPcoar-.jpg",
+        "id": 11,
+        "full_id": 202090298,
+        "full_name": "ASHUROV SHOMUROD SHOMARUF OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99833 304 05 14"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/DEQsKtTJdyQ-xYTWEoxtUaOMp3voE3Xb.jpg",
+        "id": 12,
+        "full_id": 202090302,
+        "full_name": "BAKHTIYOROVA ODINAKHON BAXODIROVNA",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99890 946 26 70"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/4bShNeeTIZOXmalpXem0D99IVxLj4vsK.jpg",
+        "id": 13,
+        "full_id": 202090303,
+        "full_name": "BAQOYEV YORQIN YAXSHI OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99897 309 47 40"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/yPQ6Fi2JX3QavXeZnZGMkeGnyDF8LJgM.jpg",
+        "id": 14,
+        "full_id": 202090306,
+        "full_name": "BURIEV BAKHTIYOR BOTIROVICH",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99899 796 51 50"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/NkIobVNdzCsTCk26D4upRIqQpIvOgsZ6.jpg",
+        "id": 15,
+        "full_id": 202090310,
+        "full_name": "ERGASHEVA OLIMAKHON MUHIDDIN QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99897 490 95 22"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/kdZhFUA9IYEXR85yxgIUB_qX1SbtXZsp.jpg",
+        "id": 16,
+        "full_id": 202090312,
+        "full_name": "FAYZULLAYEV DILSHOD RUSTAM OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99899 321 31 70"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/vHfr1E0IDxTd2RfWylnehYluVgHqEVe3.jpg",
+        "id": 17,
+        "full_id": 202090318,
+        "full_name": "IBRAGIMOVA FOTIMA SHERALI QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99890 722 27 51"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/mbO-Mu3wv-2cz3DCc4ml4_vmQaDZ6Fjz.jpg",
+        "id": 18,
+        "full_id": 202090326,
+        "full_name": "JUMAYEV JAVOHIR XUDOYOROVICH",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99890 182 22 44"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/TPDIHhxcYbkZcKbMHP4oTb6FJ3xUUsfd.jpg",
+        "id": 19,
+        "full_id": 202090334,
+        "full_name": "KHOSHIMALIYEV MUKHAMMAD ZAFARJON UGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-104",
+        "phone_number": " +99893 900 99 59"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/Ot3h6VMGMkkx8wFACbWJXC5oUlXTrpJ4.jpg",
+        "id": 20,
+        "full_id": 202090336,
+        "full_name": "KIM SEUNG HO XXX",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99890 348 41 37"
+    },
+    {
+        "image": "/img/anonymous.png",
+        "id": 21,
+        "full_id": 202090337,
+        "full_name": "KOSHELEV DMITRIY STANISLAVOVICH",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99893 554 87 05"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/XWTArJEoegFw7eMwoTeuuZ9OSl6eqEaU.jpg",
+        "id": 22,
+        "full_id": 202090342,
+        "full_name": "MAHKAMOV JASUR ABDUMANNOP OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99891 162 63 20"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/ihbRXvUw-PIFdSHIG1dtmlVDcWoA3Sfu.jpg",
+        "id": 23,
+        "full_id": 202090344,
+        "full_name": "MAKHSUMOV ZUKHRIDDIN BAXRIDDIN OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99897 742 17 11"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/qdHVp1MzhC3Irdar_EbCeuBt0R2pxQrH.jpg",
+        "id": 24,
+        "full_id": 202090350,
+        "full_name": "MUKHAMMADIEV FARRUKH GAYRAT OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99897 794 40 88"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/nCYdcIQctm56a6k8E6vp-NjGf9cWbooz.jpg",
+        "id": 25,
+        "full_id": 202090365,
+        "full_name": "OTABAYEV DAVRON TOLQIN OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99899 555 56 72"
+    },
+    {
+        "image": "/img/anonymous.png",
+        "id": 26,
+        "full_id": 202090386,
+        "full_name": "SOBIROV BOTIR BAXODIR OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-105",
+        "phone_number": " +99871 228 73 17"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/tuUCSjxaP84yjwH2l6byyIj_mI0FJ-po.jpg",
+        "id": 27,
+        "full_id": 202090390,
+        "full_name": "TANGIRBERGENOVA SHOKHIDA RASHID QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99899 933 98 07"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/r82ZOmBmVMgclO6PxBjuNRZ51r7WTl7s.jpg",
+        "id": 28,
+        "full_id": 202090391,
+        "full_name": "TAVAKKALOV NURIDDIN BAXRAMJON OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99897 402 06 58"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/sVM2bwwpP5O4IGDKzrpO4k22aXoV5e5h.jpg",
+        "id": 29,
+        "full_id": 202090395,
+        "full_name": "TOXIROV JAVOHIR ILYOS OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99890 123 20 25"
+    },
+    {
+        "image": "/img/anonymous.png",
+        "id": 30,
+        "full_id": 202090407,
+        "full_name": "USMONOV SHAHZODBEK SHOVKAT OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-106",
+        "phone_number": " +99899 815 16 29"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/NTuPeSdo0epQu4BR7GD34DDDeRiuVQiF.jpg",
+        "id": 31,
+        "full_id": 202090408,
+        "full_name": "UTEGENOV ARISLAN ABDINAYIM UGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99897 500 43 17"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/_fJgI54G6ONeNWlRk5gg5SSN3uPDTiGe.jpg",
+        "id": 32,
+        "full_id": 202090353,
+        "full_name": "MUROTOV KOZIMJON MUXSINJON OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-104",
+        "phone_number": " +99893 151 54 90"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/yMOhDbbLFiksFaTOfsnaMLj4SX14GSlv.jpg",
+        "id": 33,
+        "full_id": 202090281,
+        "full_name": "ABDIKARIMOV RUFAT NORBOY OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99897 740 44 11"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/fQ9Ri-om8WOwGkuhzJZ2zaSbSTtBQu89.jpg",
+        "id": 34,
+        "full_id": 202090291,
+        "full_name": "ALIMATOV KHABIBULLOKH XASAN OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99899 859 75 10"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/a2kphc-0V-3v1qqIEg2tml-TTenG40_G.jpg",
+        "id": 35,
+        "full_id": 202090296,
+        "full_name": "ASHUROV ASADBEK SAFAR OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99893 581 55 50"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/twb_tse7rKqusu7X78jirl-1rRfxaSzU.jpg",
+        "id": 36,
+        "full_id": 202090300,
+        "full_name": "ATOEVA UGILOY XUSNIDDIN QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99894 697 57 20"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/Nwc_U8L_QAyfjFCWeOTR0ld8upJVfvv7.jpg",
+        "id": 37,
+        "full_id": 202090308,
+        "full_name": "DEKHKONOV ABDULAZIZ JAXONGIR OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +998930044492"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/Z0pFgye6JRtN4f8XXXgkUOaKK0nrFkoM.jpg",
+        "id": 38,
+        "full_id": 202090319,
+        "full_name": "IBROHIMOV SHAMSHOD XISLAT UGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99893 927 98 02"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/nJ5tWQVy5TWN0wXOq244LSt1qBHVm-_n.jpg",
+        "id": 39,
+        "full_id": 202090335,
+        "full_name": "KHURBOEV OYATULLOKH MARIPJON OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99890 385 33 05"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/gCiuoEiudkpi7CXlDRSUJHQVO6PmclgO.jpg",
+        "id": 40,
+        "full_id": 202090338,
+        "full_name": "KUCHKAROV BEKHRUZ KHUSAN OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99894 627 23 11"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/crLWV1iUbrGC7fRXPDvHMAhjjXszlbFh.jpg",
+        "id": 41,
+        "full_id": 202090339,
+        "full_name": "KUDRATOV RUSLAN RUSTAM OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99893 319 64 32"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/s5mrFXQ1J1H73Hody3RB63dC5I9d3keC.jpg",
+        "id": 42,
+        "full_id": 202090349,
+        "full_name": "MATQOSIMOV MUXAMMAD SHUKRULLO OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99899 879 75 77"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/BBh7dsXFzykak1L_XSz0GgxDvZ46gFIo.jpg",
+        "id": 43,
+        "full_id": 202090351,
+        "full_name": "MUKHTOROV ASADBEK ALISHER OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99899 796 33 79"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/S6jdL9rHNKiAKAjxccyHhFm4TRyTbsII.jpg",
+        "id": 44,
+        "full_id": 202090316,
+        "full_name": "IBRAGIMOV JAKHONGIR BAXODIROVICH",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99871 236 09 97"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/JEmA6-vTWkK0cUbsj8jb42uRs9-f0eFT.jpg",
+        "id": 45,
+        "full_id": 202090354,
+        "full_name": "MUSURMONOV BOBUR NEMATULLA OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99894 945 34 73"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/TXM6zZDcHTpneR_ChDtJEo4HF9jA9qKz.jpg",
+        "id": 46,
+        "full_id": 202090355,
+        "full_name": "MUZAFFAROVA SHAHRIZODA MURODILLO QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99897 707 51 31"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/4QcTNFj0EVXlivbbimPUvOOnORjR5IxC.jpg",
+        "id": 47,
+        "full_id": 202090356,
+        "full_name": "NABIKHUJAEV ANVARKHUJA ZAFARKHUJA OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99899 921 91 21"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/AXpebLZlt8lzL0S_PLrHwb_hKrETmdx8.jpg",
+        "id": 48,
+        "full_id": 202090370,
+        "full_name": "QUDRATOV BAXTIYOR QILICHBOY OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99894 623 22 03"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/bUqNTCoyIU_B8Mr9h7jpVaIWUIyi-atA.jpg",
+        "id": 49,
+        "full_id": 202090382,
+        "full_name": "SHODIBEKOV KHOJIAKBAR XASANOVICH",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99899 055 50 19"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/vADmK_vXfuXEqD3UIvRhVO12B-DG8WAP.jpg",
+        "id": 50,
+        "full_id": 202090388,
+        "full_name": "SULAYMONOV ASADBEK NABI OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99890 188 28 27"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/UK_Z0JNm-mIGY9nY3CQRNqcdPlKkh_Aa.jpg",
+        "id": 51,
+        "full_id": 202090403,
+        "full_name": "TUYCHIEV SHOKHRUKH UKTAM OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99893 131 66 14"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/DPd3E30l5uSqoWEw2dvbO7m48aG9SsCQ.jpg",
+        "id": 52,
+        "full_id": 202090412,
+        "full_name": "XAYITOV MUZAFFAR SHOKIR OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-105",
+        "phone_number": "   +99899  000 78"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/JsmUbssR4hbzyIEqbJ5D8foSb6zShmZ4.jpg",
+        "id": 53,
+        "full_id": 202090320,
+        "full_name": "ILYOSJONOV SOBIRJON ORIFJONOVICH",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99897 429 00 50"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/ROv3x5JbMX_gNIJa4lnNAawWdnNLQxbm.jpg",
+        "id": 54,
+        "full_id": 202090359,
+        "full_name": "NURMATOV SARDORJON MAMURJON OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99899 832 13 09"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/n7hbU2vGblm1E8MVt7AwuoNo585wsEip.jpg",
+        "id": 55,
+        "full_id": 202090313,
+        "full_name": "GULMURODOV ISKANDAR ISMOIL OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99890 901 66 21"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/V6qRLh2hFFKa7zRmjSQ8b-AAfXqAxaBg.jpg",
+        "id": 56,
+        "full_id": 202090394,
+        "full_name": "TOSHMURODOVA SHAXNOZA BAXROM QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99893 163 80 54"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/4ARRXSRW9_9AuqV46My47xM1pYdNXeEL.jpg",
+        "id": 57,
+        "full_id": 202090284,
+        "full_name": "ABDUALIYEVA SARVINA AKMAL QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-106",
+        "phone_number": " +99890 903 28 41"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/jWONEgN3CT4kzuEFe21XqZWQ3IwueZTx.jpg",
+        "id": 58,
+        "full_id": 202090286,
+        "full_name": "ABDUGANIYEV DILSHOD BAXTIYOR OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-106",
+        "phone_number": " +99894 610 77 88"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/O92hLCSaeNxNYNhSO9uh1OG78QpuiHW7.jpg",
+        "id": 59,
+        "full_id": 202090288,
+        "full_name": "ABDUMUMINOV ULUG'BEK ABDUVOHID OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": "  +99890 315 37 1"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/bTFTui8n40G3poUTKqpVe4gEgXG769uf.jpg",
+        "id": 60,
+        "full_id": 202090289,
+        "full_name": "ABDUSATTOROVA MUXAYYO NOZIMJON QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-105",
+        "phone_number": " +99899 934 22 75"
+    },
+    {
+        "image": "/img/anonymous.png",
+        "id": 61,
+        "full_id": 202090292,
+        "full_name": "ALIMOV NODIRKHUJA BAXTIYOR OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-105",
+        "phone_number": " +99890 806 12 79"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/-8wiebyfROhfk0Z_5Kenx5UnUnJOJrHm.jpg",
+        "id": 62,
+        "full_id": 202090295,
+        "full_name": "ASHURMATOV NAVRUZBEK NODIRJONOVICH",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99894 404 39 56"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/MC9cENLyPdUjKpNZ729-8fwI-W3SV_TA.jpg",
+        "id": 63,
+        "full_id": 202090301,
+        "full_name": "AVLIYOKULOV MUKHAMMADALI BAYRAM OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99893 006 42 26"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/W45riQwt8LknpfTW2ne6Pf9UvInVxzkM.jpg",
+        "id": 64,
+        "full_id": 202090304,
+        "full_name": "BAXRITDINOV ABDUMALIK ASLITDIN OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-106",
+        "phone_number": " +998997024381"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/uHUF4VEZb102HnVH8toAr3ePb7js0Hhu.jpg",
+        "id": 65,
+        "full_id": 202090305,
+        "full_name": "BOZOROV SARDOR OROLOVICH",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99891 234 20 01"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/TjGBnPDbF8AMjs0v1uSUsoVEvG39VF9b.jpg",
+        "id": 66,
+        "full_id": 202090011,
+        "full_name": "ABDURAHMONOV RAMAZON QURBONAZAR OGLI",
+        "faculty": "Architecture",
+        "group": "A-104",
+        "phone_number": " +99890 295 53 27"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/yZmSk7_hFcA5pko5UskH9_gX5VKeWW3N.jpg",
+        "id": 67,
+        "full_id": 202090012,
+        "full_name": "ABDURASULOVA GULSHODA OLIM QIZI",
+        "faculty": "Architecture",
+        "group": "A-105",
+        "phone_number": " +99894 604 44 50"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/_SgViLwjoTrmAsfiFJ2A2ZFB9PO6mgvs.jpg",
+        "id": 68,
+        "full_id": 202090017,
+        "full_name": "AHMEDOV UMIDJON RAIM OGLI",
+        "faculty": "Architecture",
+        "group": "A-106",
+        "phone_number": " +99871 276 45 86"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/cbxL__2kPiQr8gdGiRUeo9PvZpiD4KEy.jpg",
+        "id": 69,
+        "full_id": 202090020,
+        "full_name": "AKBARALIYEVA DURDONA MUROD QIZI",
+        "faculty": "Architecture",
+        "group": "A-106",
+        "phone_number": " +99890 970 78 21"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/JXHh9vrHYtlsrgaEFPSWmdPLBUtOEZbx.jpg",
+        "id": 70,
+        "full_id": 202090022,
+        "full_name": "ALIKOVA GULDONA ALISHER QIZI",
+        "faculty": "Architecture",
+        "group": "A-104",
+        "phone_number": " +998900454712"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/LsA3k8JOaFLSrumdcLT0ts2xi7FEMRAz.jpg",
+        "id": 71,
+        "full_id": 202090323,
+        "full_name": "JALGASBAEV SULTANBEK SHOMIRBAY UGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-104",
+        "phone_number": " +998941462444"
+    },
+    {
+        "image": "/img/anonymous.png",
+        "id": 72,
+        "full_id": 202090333,
+        "full_name": "KHOLQUZIEV SHAMSIDDIN ALISHER OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-105",
+        "phone_number": " +99899 806 54 38"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/P4F5mlq8bndTS2GUvT-Js6pKfgoa2xH_.jpg",
+        "id": 73,
+        "full_id": 202090343,
+        "full_name": "MAKHMUDOV KOMRONBEK ABDUMAKSUD UGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-105",
+        "phone_number": " +99898 304 24 62"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/oQ9D9EKMYF9-bfhQOmOFDkk-EIgJrHha.jpg",
+        "id": 74,
+        "full_id": 202090345,
+        "full_name": "MALIKOV MUSTAFO ZOHIDOVICH",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-105",
+        "phone_number": " +998949119111"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/JB2gR1Dkp4Y03rutUuauVC2MUguUQ0Qn.jpg",
+        "id": 75,
+        "full_id": 202090329,
+        "full_name": "KHAKIMJONOVA SHAKHZODA NURIDDINOVNA",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-105",
+        "phone_number": " +99891 408 64 96"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/8kdb7fVThOKG2mtEalVW0QapTEjNLzpK.jpg",
+        "id": 76,
+        "full_id": 202090361,
+        "full_name": "OKTAMOV SHAXBOZ SODIQ OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99899 300 39 34"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/VAP8HCjjgZUxcunccf5e1shR9Iuo4epY.jpg",
+        "id": 77,
+        "full_id": 202090368,
+        "full_name": "QOCHQAROV BAYOZIDDIN SALOXIDDIN OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-105",
+        "phone_number": " +99894 502 31 20"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/H8f32ypOLZEKf9XDu1AJlhTEVbI_NOin.jpg",
+        "id": 78,
+        "full_id": 202090369,
+        "full_name": "QODIRJONOV ARSLONBEK ULUGBEK OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-105",
+        "phone_number": " +99890 676 37 37"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/gdqx3vJX1_9f7Eiz_u21Lng8Q9K3hiHy.jpg",
+        "id": 79,
+        "full_id": 202090385,
+        "full_name": "SOBIRJONOVA MANZURA NODIRJON QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-105",
+        "phone_number": " +99897 707 06 27"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/1vCVWdmLpI2dw1flO696_uVgkpeLDqqH.jpg",
+        "id": 80,
+        "full_id": 202090396,
+        "full_name": "TOYBOYEVA SEVARA AZAMAT QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99899 863 44 42"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/V94FYjP0U5PF-9xh03eAMfQP3KXKaNRt.jpg",
+        "id": 81,
+        "full_id": 202090397,
+        "full_name": "TURAYEVA ANAKHON ANVAR QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-106",
+        "phone_number": " +998931332316"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/9yRaC_LlWsXuqAIOsd5aYfrZtbxH9y_u.jpg",
+        "id": 82,
+        "full_id": 202090405,
+        "full_name": "URINOVA SARVINOZ XOLIQULOVNA",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99899 364 82 50"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/WejEujGvXbFoWiDyc8M-cVBo6e4n8DMQ.jpg",
+        "id": 83,
+        "full_id": 202090409,
+        "full_name": "UTKIROV AKMAL GANI OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-104",
+        "phone_number": " +99890 006 02 02"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/uu72IkKmOwYppZLqe16KAcypd3a1hN78.jpg",
+        "id": 84,
+        "full_id": 202090414,
+        "full_name": "YOLDASHALIYEV SHAHBOZJON SHAXOBIDDIN OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-106",
+        "phone_number": " +99899 914 67 62"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/1bbnh6gyNrgMnn5waUjL7rYa0U8Tq2lL.jpg",
+        "id": 85,
+        "full_id": 202090299,
+        "full_name": "ASKARBEKOVA SITORA ANVAR QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99893 537 34 70"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/n3fi0jmDttb8ymD1DmlVwKYPE-pc4T5S.jpg",
+        "id": 86,
+        "full_id": 202090314,
+        "full_name": "HAQBERDIYEV SADRIDDIN SOBIR OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-104",
+        "phone_number": " +998336922525"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/kPWDrV2I_6XSR22FW3EioB3yywpLU4pk.jpg",
+        "id": 87,
+        "full_id": 202090322,
+        "full_name": "ISMATULLAYEV ULUGBEK OYBEK  OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99894 640-12-50"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/Hj9ZapTSt8w01l2kiYIF5Tf8QqCxcH96.jpg",
+        "id": 88,
+        "full_id": 202090328,
+        "full_name": "KABIROV SHERZOD MURODJON OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-106",
+        "phone_number": " +998901232191"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/a4TKbkB4KJqcx8HpdfhmrgQeTQNqvIlf.jpg",
+        "id": 89,
+        "full_id": 202090030,
+        "full_name": "BAXRONOV NURALI MUXIDDINOVICH",
+        "faculty": "Architecture",
+        "group": "A-102",
+        "phone_number": " +99895 603 12 17"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/H9XqNgsdbE44Lvxt-T6ASZdaInz3yczV.jpg",
+        "id": 90,
+        "full_id": 202090348,
+        "full_name": "MARDONOVA DILAFRUZ UTKIR QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-105",
+        "phone_number": " +99891 547 72 76"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/njgQNGldlWGdqgJyaKgiANDHDCXCzCF0.jpg",
+        "id": 91,
+        "full_id": 202090352,
+        "full_name": "MULKAMOLOV HABIBULLO XOLMAMAT OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-106",
+        "phone_number": " +998997332236"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/36p5kT1kARvkMhPeX6g0ILboa5xBS-iy.jpg",
+        "id": 92,
+        "full_id": 202090387,
+        "full_name": "NISHONOV   SARDORBEK SODIQOVICH",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99899 861 37 67"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/vwwYTW_pEBnY2kjqJn0-SssGy9xSGOFt.jpg",
+        "id": 93,
+        "full_id": 202090362,
+        "full_name": "OKTAMOVA SHAXRIZODA OLIMJON QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99890 935 25 18"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/Jr_z7TlqiNBiCU2iMMDS2MFxXu2f1PBQ.jpg",
+        "id": 94,
+        "full_id": 202090364,
+        "full_name": "OMONOV ALIAKBAR DILMUROD OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-106",
+        "phone_number": " +99897 141 74 39"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/bhqjulQ49Mt4uCfNThQ95Zog7zgcFwUk.jpg",
+        "id": 95,
+        "full_id": 202090366,
+        "full_name": "OTAJONOVA MUNIRA BORATBOY QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-101",
+        "phone_number": " +99894 159 24 47"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/HtdhhN6w9HYw77QpCDFHGLlLT4BEKhD_.jpg",
+        "id": 96,
+        "full_id": 202090367,
+        "full_name": "PIRNAZAROV KOMRONBEK ELMUROD OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99899 047 48 11"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/79Y7epUCCN2E9AImKzVGDZgcw--fMgeR.jpg",
+        "id": 97,
+        "full_id": 202090374,
+        "full_name": "SALOMOVA MARJONA MAMUR QIZI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-103",
+        "phone_number": " +99897 239 47 77"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/BEsYs_mZNP5ipYNAawbkI5V-zK9aP6wc.jpg",
+        "id": 98,
+        "full_id": 202090375,
+        "full_name": "SAMANDAROV SHERXON MUZAFFAR OGLI",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-102",
+        "phone_number": " +99899 402 19 71"
+    },
+    {
+        "image": "http://ais.ajou.uz/storage/web/source/1/3EnLZUw2PbXEdel71wnANnDBesu5xoFA.jpg",
+        "id": 99,
+        "full_id": 202090383,
+        "full_name": "SHOKIROV JURABEK VOSEJONOVICH",
+        "faculty": "Electrical and Computer Engineering",
+        "group": "E-105",
+        "phone_number": " +99893 506 70 17"
+    }
+]
