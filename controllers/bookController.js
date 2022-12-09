@@ -1,12 +1,44 @@
+const multer = require("multer");
+
 const handleFactory = require("../handlers/handleFactory");
 const Book = require("../modules/bookModule");
 const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 
-exports.getAllBooks = handleFactory.getAll(Book, { _id: { $exists: true } });
+const storage = multer.diskStorage({
+  destination(req, file, cb) {
+    cb(null, "data/pdf-Books");
+  },
+  filename(req, file, cb) {
+    const ext = file.mimetype.split("/")[1];
+    cb(null, `${file.fieldname}-${Date.now()}.${ext}`);
+  },
+});
+const fileFilter = (req, file, cb) => {
+  console.log(file);
+  if (
+    file.mimetype.startsWith("application") &&
+    file.mimetype.endsWith("pdf")
+  ) {
+    cb(null, true);
+  } else {
+    cb(new AppError("Not an pdf! Please upload only pdf files.", 400), false);
+  }
+};
+
+const upload = multer({ storage, fileFilter });
+exports.uploadFile = upload.single("file");
+exports.uploadPdf = catchAsync(async (req, res, next) => {
+  console.log(req.body, req.file, req.params.id);
+  console.log("uploaded");
+});
+exports.getAllBooks = handleFactory.getAll(Book, {
+  _id: { $exists: true },
+});
 exports.addBook = catchAsync(async (req, res, next) => {
   const doc = await Book.create(req.body);
   const qrCode = await doc.qrcode();
+  // await addPDF(doc,req)
   res.status(200).json({
     status: "success",
     data: {

@@ -2,9 +2,34 @@
 
 learn facet 
 
+id fronted store
 
 model.exports =exports
 uniq seria of books
 
 add reference between book to lease
 EXp:smone read this book
+
+
+
+  upload(req, res, (err) => {
+    if (err instanceof multer.MulterError) {
+      console.log(err);
+    } else if (err) {
+      console.log(`ozmizi ${err}`);
+    }
+    console.log(req.file, req.body);
+    // Everything went fine.
+  });
+  // const {
+  //   file,
+  //   body: { name },
+  // } = req;
+  console.log(req.file);
+  // const fileName =name +
+  // if (file.detectedFileExtention != ".pdf")
+  //   return next(new AppError("Invalid file type"), 400);
+  // await pipeline(
+  //   file.stream,
+  //   fs.createWriteStream(path.join(__dirname, `../data/pdf-Books/${fileName}`))
+  // );

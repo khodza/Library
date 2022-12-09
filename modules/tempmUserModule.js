@@ -5,7 +5,7 @@ const tempUserSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please add your name"],
   },
-  image: {
+  immage: {
     type: String,
   },
   id: {

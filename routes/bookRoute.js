@@ -21,4 +21,12 @@ router
   .route("/amount/:id")
   .patch(authController.protect, bookController.addBookCopy)
   .delete(authController.protect, bookController.deleteBookCopy);
+
+router
+  .route("/upload/:id")
+  .post(
+    authController.protect,
+    bookController.uploadFile,
+    bookController.uploadPdf
+  );
 module.exports = router;

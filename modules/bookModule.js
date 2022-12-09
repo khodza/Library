@@ -43,6 +43,9 @@ const bookSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,
     },
+    file: {
+      type: String,
+    },
   },
   {
     toJSON: { virtuals: true },
