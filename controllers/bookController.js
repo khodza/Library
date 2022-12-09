@@ -1,4 +1,5 @@
 const multer = require("multer");
+const path = require("path");
 
 const handleFactory = require("../handlers/handleFactory");
 const Book = require("../modules/bookModule");
@@ -9,13 +10,28 @@ const storage = multer.diskStorage({
   destination(req, file, cb) {
     cb(null, "data/pdf-Books");
   },
-  filename(req, file, cb) {
-    const ext = file.mimetype.split("/")[1];
-    cb(null, `${file.fieldname}-${Date.now()}.${ext}`);
+  async filename(req, file, cb) {
+    try {
+      const bookName = (
+        await Book.find({ _id: req.params.id }, { name: 1, _id: 0 })
+      )[0].name;
+      const ext = file.mimetype.split("/")[1];
+      const fileName = `${bookName}-${req.params.id}.${ext}`;
+      req.body.file = fileName;
+      cb(null, fileName);
+    } catch (err) {
+      if (err instanceof multer.MulterError) {
+        return cb(
+          new AppError(
+            "There was error in uploading file with app.Please try again!"
+          )
+        );
+      }
+      cb(new AppError("Bunday kitob bazada yo'q avval kitobni kiriting!", 404));
+    }
   },
 });
 const fileFilter = (req, file, cb) => {
-  console.log(file);
   if (
     file.mimetype.startsWith("application") &&
     file.mimetype.endsWith("pdf")
@@ -29,8 +45,17 @@ const fileFilter = (req, file, cb) => {
 const upload = multer({ storage, fileFilter });
 exports.uploadFile = upload.single("file");
 exports.uploadPdf = catchAsync(async (req, res, next) => {
-  console.log(req.body, req.file, req.params.id);
-  console.log("uploaded");
+  const doc = await Book.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true,
+  });
+  if (!doc) {
+    return next(new AppError("Bu ID lik dakument topilmadi!!", 404));
+  }
+  res.status(200).json({
+    status: "success",
+    message: "File uploaded successfully",
+  });
 });
 exports.getAllBooks = handleFactory.getAll(Book, {
   _id: { $exists: true },
@@ -108,3 +133,17 @@ exports.downloadAllBooks = handleFactory.downloadExel(
   Book,
   "barcha-kitoblar.xlsx"
 );
+
+exports.downloadPdfFile = catchAsync(async (req, res, next) => {
+  const doc = await Book.findById(req.params.id);
+  if (!doc) {
+    return next(new AppError("Bu ID lik kitob topilmadi!!", 404));
+  }
+  const { file } = doc;
+
+  if (!file) {
+    return next(new AppError(`This book doesn't have pdf file`));
+  }
+  const link = path.join(__dirname, `../data/pdf-Books/${file}`);
+  res.download(link);
+});

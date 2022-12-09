@@ -29,4 +29,7 @@ router
     bookController.uploadFile,
     bookController.uploadPdf
   );
+router
+  .route("/download/:id")
+  .get(authController.protect, bookController.downloadPdfFile);
 module.exports = router;
