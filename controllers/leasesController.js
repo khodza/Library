@@ -13,6 +13,9 @@ exports.addLease = catchAsync(async (req, res, next) => {
   if (book.amount <= 0) {
     return next(new AppError("Bu kitob kutubxonada qolmagan!", 404));
   }
+  if (!book.codes.includes(req.body.orderedBookSeria)) {
+    next(new AppError("Bu serialik kitob bazada mavjud emas!", 404));
+  }
   const orderedBookSeria = req.body.orderedBookSeria;
   // eslint-disable-next-line no-plusplus
   for (let i = 0; i < book.codes.length; i++) {
