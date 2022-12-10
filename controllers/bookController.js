@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
         await Book.find({ _id: req.params.id }, { name: 1, _id: 0 })
       )[0].name;
       const ext = file.mimetype.split("/")[1];
-      const fileName = `${bookName}-${req.params.id}.${ext}`;
+      const fileName = `${bookName}-${Date.now()}.${ext}`;
       req.body.file = fileName;
       cb(null, fileName);
     } catch (err) {
@@ -38,7 +38,7 @@ const storageOnAdd = multer.diskStorage({
   filename(req, file, cb) {
     const bookName = req.body.name;
     const ext = file.mimetype.split("/")[1];
-    const fileName = `${bookName}-${req.params.id}.${ext}`;
+    const fileName = `${bookName}-${Date.now()}.${ext}`;
     req.body.file = fileName;
     cb(null, fileName);
   },
@@ -57,6 +57,7 @@ const uploadOnUpdate = multer({ storage, fileFilter });
 exports.uploadFile = uploadOnUpdate.single("file");
 
 exports.uploadPdf = catchAsync(async (req, res, next) => {
+  if (!req.body.file) return next(new AppError("Iltimos faylni yuklang!", 400));
   const doc = await Book.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
     runValidators: true,
