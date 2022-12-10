@@ -100,10 +100,14 @@ exports.deleteOne = (Model) =>
     });
   });
 
-exports.downloadExel = (Model, fileName) =>
+exports.downloadExcel = (Model, fileName, matchOpt, sortOpt) =>
   catchAsync(async (req, res, next) => {
     const wb = XLSX.utils.book_new(); //new workbook
-    const data = await Model.find().select(["-_id", "-__v", "-id"]);
+    const data = await Model.aggregate([
+      { $match: matchOpt },
+      { $sort: sortOpt },
+      { $project: { _id: 0, id: 0, __v: 0, slug: 0, active: 0 } },
+    ]);
     let temp = JSON.stringify(data);
     temp = JSON.parse(temp);
     const ws = XLSX.utils.json_to_sheet(temp);

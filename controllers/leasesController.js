@@ -111,7 +111,15 @@ exports.deleteHistory = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.downloadAllLeases = handleFactory.downloadExel(
+exports.downloadAllLeases = handleFactory.downloadExcel(
   Lease,
-  "barcha-ijaralar.xlsx"
+  "barcha-ijaralar.xlsx",
+  { active: true },
+  { orderedTime: -1 }
+);
+exports.downloadAllHistory = handleFactory.downloadExcel(
+  Lease,
+  "barcha-ijaralar-tarixi.xlsx",
+  { active: false },
+  { deletedAt: -1 }
 );

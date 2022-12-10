@@ -147,9 +147,13 @@ exports.getBook = catchAsync(async (req, res, next) => {
 });
 exports.deleteBook = handleFactory.deleteOne(Book);
 
-exports.downloadAllBooks = handleFactory.downloadExel(
+exports.downloadAllBooks = handleFactory.downloadExcel(
   Book,
-  "barcha-kitoblar.xlsx"
+  "barcha-kitoblar.xlsx",
+  {
+    _id: { $exists: true },
+  },
+  { addedAt: -1 }
 );
 
 exports.downloadPdfFile = catchAsync(async (req, res, next) => {
