@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.use(authController.protect);
 router.route("/download").get(leasesController.downloadAllLeases);
-router.route("/download/history").get(leasesController.downloadAllHistory);
+router.route("history/download").get(leasesController.downloadAllHistory);
 
 router
   .route("/history")
