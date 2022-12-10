@@ -31,6 +31,18 @@ const storage = multer.diskStorage({
     }
   },
 });
+const storageOnAdd = multer.diskStorage({
+  destination(req, file, cb) {
+    cb(null, "data/pdf-Books");
+  },
+  filename(req, file, cb) {
+    const bookName = req.body.name;
+    const ext = file.mimetype.split("/")[1];
+    const fileName = `${bookName}-${req.params.id}.${ext}`;
+    req.body.file = fileName;
+    cb(null, fileName);
+  },
+});
 const fileFilter = (req, file, cb) => {
   if (
     file.mimetype.startsWith("application") &&
@@ -41,9 +53,9 @@ const fileFilter = (req, file, cb) => {
     cb(new AppError("Not an pdf! Please upload only pdf files.", 400), false);
   }
 };
+const uploadOnUpdate = multer({ storage, fileFilter });
+exports.uploadFile = uploadOnUpdate.single("file");
 
-const upload = multer({ storage, fileFilter });
-exports.uploadFile = upload.single("file");
 exports.uploadPdf = catchAsync(async (req, res, next) => {
   const doc = await Book.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
@@ -57,13 +69,13 @@ exports.uploadPdf = catchAsync(async (req, res, next) => {
     message: "File uploaded successfully",
   });
 });
-exports.getAllBooks = handleFactory.getAll(Book, {
-  _id: { $exists: true },
-});
+
+const uploadOnAddBook = multer({ storage: storageOnAdd, fileFilter });
+exports.uploadFileOnAdd = uploadOnAddBook.single("file");
+
 exports.addBook = catchAsync(async (req, res, next) => {
   const doc = await Book.create(req.body);
   const qrCode = await doc.qrcode();
-  // await addPDF(doc,req)
   res.status(200).json({
     status: "success",
     data: {
@@ -72,6 +84,11 @@ exports.addBook = catchAsync(async (req, res, next) => {
     },
   });
 });
+
+exports.getAllBooks = handleFactory.getAll(Book, {
+  _id: { $exists: true },
+});
+
 exports.addBookCopy = catchAsync(async (req, res, next) => {
   const book = await Book.findById(req.params.id);
   const bookCodes = req.body.codes;

@@ -7,7 +7,11 @@ const authController = require("../controllers/authController");
 router
   .route("/")
   .get(bookController.getAllBooks)
-  .post(authController.protect, bookController.addBook);
+  .post(
+    authController.protect,
+    bookController.uploadFileOnAdd,
+    bookController.addBook
+  );
 
 router.route("/download").get(bookController.downloadAllBooks);
 
@@ -29,7 +33,5 @@ router
     bookController.uploadFile,
     bookController.uploadPdf
   );
-router
-  .route("/download/:id")
-  .get(authController.protect, bookController.downloadPdfFile);
+router.route("/download/:id").get(bookController.downloadPdfFile);
 module.exports = router;
