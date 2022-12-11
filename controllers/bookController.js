@@ -75,7 +75,9 @@ const uploadOnAddBook = multer({ storage: storageOnAdd, fileFilter });
 exports.uploadFileOnAdd = uploadOnAddBook.single("file");
 
 exports.addBook = catchAsync(async (req, res, next) => {
-  const doc = await Book.create(req.body);
+  const body = { ...req.body };
+  body.codes = JSON.parse(req.body.codes);
+  const doc = await Book.create(body);
   const qrCode = await doc.qrcode();
   res.status(200).json({
     status: "success",
