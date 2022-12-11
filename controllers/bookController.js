@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
         await Book.find({ _id: req.params.id }, { name: 1, _id: 0 })
       )[0].name;
       const ext = file.mimetype.split("/")[1];
-      const fileName = `${bookName}-${Date.now()}.${ext}`;
+      const fileName = `${bookName}.${ext}`;
       req.body.file = fileName;
       cb(null, fileName);
     } catch (err) {
@@ -38,7 +38,7 @@ const storageOnAdd = multer.diskStorage({
   filename(req, file, cb) {
     const bookName = req.body.name;
     const ext = file.mimetype.split("/")[1];
-    const fileName = `${bookName}-${Date.now()}.${ext}`;
+    const fileName = `${bookName}.${ext}`;
     req.body.file = fileName;
     cb(null, fileName);
   },
@@ -88,9 +88,17 @@ exports.addBook = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getAllBooks = handleFactory.getAll(Book, {
-  _id: { $exists: true },
-});
+exports.getAllBooks = async (req, res, next) => {
+  const bookCodes = await Book.aggregate([
+    { $project: { codes: 1, _id: 0 } },
+    { $unwind: "$codes" },
+  ]);
+  console.log(bookCodes);
+  console.log(bookCodes.length);
+};
+// exports.getAllBooks = handleFactory.getAll(Book, {
+//   _id: { $exists: true },
+// });
 
 exports.addBookCopy = catchAsync(async (req, res, next) => {
   const book = await Book.findById(req.params.id);

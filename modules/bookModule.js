@@ -21,8 +21,13 @@ const bookSchema = new mongoose.Schema(
       type: Number,
       required: [true, `Kitob betlari sonini kiriting`],
     },
-    cd_disk: {
+    category: {
       type: String,
+      enum: ["Badiy", "Ilmiy", "Ingilizcha"],
+    },
+    cd_disk: {
+      type: Boolean,
+      default: false,
     },
     codes: [
       {
@@ -32,6 +37,7 @@ const bookSchema = new mongoose.Schema(
     ],
     get_options: {
       type: String,
+      default: "Ajou",
     },
     price: {
       type: String,
