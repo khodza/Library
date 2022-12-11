@@ -25,7 +25,7 @@ const bookSchema = new mongoose.Schema(
     category: {
       type: String,
       default: "Aniqlanmagan",
-      enum: ["Badiy", "Ilmiy", "Ingilizcha"],
+      enum: ["Badiy", "Ilmiy", "Ingilizcha", "Aniqlanmagan"],
     },
     cd_disk: {
       type: Boolean,
