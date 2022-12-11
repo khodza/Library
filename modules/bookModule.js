@@ -20,13 +20,12 @@ const bookSchema = new mongoose.Schema(
     },
     pages: {
       type: Number,
-
       required: [true, `Kitob betlari sonini kiriting`],
     },
     category: {
       type: String,
-      default: "Barchasi",
-      enum: ["Badiy", "Ilmiy", "Ingilizcha", "Barchasi"],
+      default: "Aniqlanmagan",
+      enum: ["Badiy", "Ilmiy", "Ingilizcha"],
     },
     cd_disk: {
       type: Boolean,
@@ -35,6 +34,7 @@ const bookSchema = new mongoose.Schema(
     codes: [
       {
         type: String,
+        index: { unique: true },
         required: [true, "Kitob serialarini qoshing!"],
       },
     ],
