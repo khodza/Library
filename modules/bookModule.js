@@ -16,14 +16,17 @@ const bookSchema = new mongoose.Schema(
     },
     year: {
       type: Number,
+      default: 2020,
     },
     pages: {
       type: Number,
+
       required: [true, `Kitob betlari sonini kiriting`],
     },
     category: {
       type: String,
-      enum: ["Badiy", "Ilmiy", "Ingilizcha"],
+      default: "Barchasi",
+      enum: ["Badiy", "Ilmiy", "Ingilizcha", "Barchasi"],
     },
     cd_disk: {
       type: Boolean,
@@ -40,10 +43,12 @@ const bookSchema = new mongoose.Schema(
       default: "Ajou",
     },
     price: {
-      type: String,
+      type: Number,
+      default: 0,
     },
     lang: {
       type: String,
+      default: "aniqlanmagan",
     },
     addedAt: {
       type: Date,
