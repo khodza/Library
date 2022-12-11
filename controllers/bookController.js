@@ -88,17 +88,17 @@ exports.addBook = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getAllBooks = async (req, res, next) => {
-  const bookCodes = await Book.aggregate([
-    { $project: { codes: 1, _id: 0 } },
-    { $unwind: "$codes" },
-  ]);
-  console.log(bookCodes);
-  console.log(bookCodes.length);
-};
-// exports.getAllBooks = handleFactory.getAll(Book, {
-//   _id: { $exists: true },
-// });
+// exports.getAllBooks = async (req, res, next) => {
+//   const bookCodes = await Book.aggregate([
+//     { $project: { codes: 1, _id: 0 } },
+//     { $unwind: "$codes" },
+//   ]);
+//   console.log(bookCodes);
+//   console.log(bookCodes.length);
+// };
+exports.getAllBooks = handleFactory.getAll(Book, {
+  _id: { $exists: true },
+});
 
 exports.addBookCopy = catchAsync(async (req, res, next) => {
   const book = await Book.findById(req.params.id);
