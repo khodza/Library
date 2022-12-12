@@ -95,7 +95,7 @@ exports.addBook = catchAsync(async (req, res, next) => {
   );
   if (matchings.length > 0)
     return next(
-      new AppError(`Bu serialik ${matchings} kitoblar bazada mavjud!`)
+      new AppError(`Bu serialik ${matchings} kitoblar bazada mavjud!`, 400)
     );
   const doc = await Book.create(body);
   const qrCode = await doc.qrcode();
