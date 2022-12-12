@@ -3,3 +3,4 @@ node_modules/
 .idea/
 config.env
 data/pdf-Books/*.pdf
+data/exel-docs/*.xlsx
