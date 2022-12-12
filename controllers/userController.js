@@ -26,7 +26,6 @@ exports.getMe = catchAsync(async (req, res, next) => {
 });
 exports.getTempUser = catchAsync(async (req, res, next) => {
   const tempUser = await TempUser.findOne({ full_id: req.params.idNumber });
-  console.log(tempUser);
   if (!tempUser) return next(new AppError(`O'quvchi topilmadi`));
   res.status(200).json({
     status: "success",

@@ -93,7 +93,6 @@ exports.addBook = catchAsync(async (req, res, next) => {
   const matchings = bookCodes[0].codes.filter(
     (obj) => body.codes.indexOf(obj) !== -1
   );
-  console.log(matchings);
   if (matchings.length > 0)
     return next(
       new AppError(`Bu serialik ${matchings} kitoblar bazada mavjud!`)
