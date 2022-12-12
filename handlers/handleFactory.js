@@ -1,5 +1,6 @@
 const XLSX = require("xlsx");
 const path = require("path");
+const _ = require("underscore");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const Features = require("../utils/features");
@@ -27,6 +28,16 @@ exports.getAll = (Model, matchParam) =>
       .limitField()
       .paginate();
 
+    let queryObj = { ...req.query };
+    const excludedFields = ["page", "sort", "limit", "fields"];
+    excludedFields.forEach((el) => delete queryObj[el]);
+    let queryStr = JSON.stringify(queryObj);
+    queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
+    queryObj = JSON.parse(queryStr);
+    if (Object.keys(queryObj).length !== 0) {
+      matchParam = { ...matchParam, ...queryObj };
+    }
+    console.log(matchParam);
     const doc = await features.query;
     const maxPage = await getMaxPage(Model, matchParam, req);
     res.status(200).json({
