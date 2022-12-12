@@ -119,7 +119,7 @@ exports.addBookCopy = catchAsync(async (req, res, next) => {
   const matchings = book.codes.filter((obj) => bookCodes.indexOf(obj) !== -1);
   if (matchings.length > 0)
     return next(
-      new AppError(`Bu serialik ${matchings} kitoblar bazada mavjud!`)
+      new AppError(`Bu serialik ${matchings} kitoblar bazada mavjud!`, 400)
     );
   bookCodes.forEach((code) => {
     book.codes.push(code);
