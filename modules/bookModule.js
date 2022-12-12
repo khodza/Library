@@ -37,6 +37,10 @@ const bookSchema = new mongoose.Schema(
         required: [true, "Kitob serialarini qoshing!"],
       },
     ],
+    uniqueId: {
+      type: String,
+      unique: true,
+    },
     get_options: {
       type: String,
       default: "Ajou",
