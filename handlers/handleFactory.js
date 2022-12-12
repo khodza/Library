@@ -116,3 +116,16 @@ exports.downloadExcel = (Model, fileName, matchOpt, sortOpt) =>
     XLSX.writeFile(wb, down);
     res.download(down);
   });
+
+exports.searchDoc = (Model) =>
+  catchAsync(async (req, res, next) => {
+    const payload = req.body.payload.trim();
+    let search = await Model.find({
+      name: { $regex: new RegExp(`^${payload}.*`, "i") },
+    }).exec();
+    search = search.slice(0, 10);
+    res.status(200).json({
+      status: "success",
+      data: search,
+    });
+  });

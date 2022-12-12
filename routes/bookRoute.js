@@ -34,4 +34,5 @@ router
     bookController.uploadPdf
   );
 router.route("/download/:id").get(bookController.downloadPdfFile);
+router.route("/search").post(bookController.searchBook);
 module.exports = router;

@@ -88,3 +88,4 @@ bookSchema.methods.qrcode = async function () {
 };
 const Book = mongoose.model("Book", bookSchema);
 module.exports = Book;
+

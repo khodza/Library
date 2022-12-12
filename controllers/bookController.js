@@ -191,3 +191,5 @@ exports.downloadPdfFile = catchAsync(async (req, res, next) => {
   const link = path.join(__dirname, `../data/pdf-Books/${file}`);
   res.download(link);
 });
+
+exports.searchBook = handleFactory.searchDoc(Book);
