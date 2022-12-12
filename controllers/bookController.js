@@ -77,6 +77,27 @@ exports.uploadFileOnAdd = uploadOnAddBook.single("file");
 exports.addBook = catchAsync(async (req, res, next) => {
   const body = { ...req.body };
   body.codes = JSON.parse(req.body.codes);
+  const bookCodes = await Book.aggregate([
+    {
+      $unwind: "$codes",
+    },
+    {
+      $group: {
+        _id: null,
+        codes: {
+          $addToSet: "$codes",
+        },
+      },
+    },
+  ]);
+  const matchings = bookCodes[0].codes.filter(
+    (obj) => body.codes.indexOf(obj) !== -1
+  );
+  console.log(matchings);
+  if (matchings.length > 0)
+    return next(
+      new AppError(`Bu serialik ${matchings} kitoblar bazada mavjud!`)
+    );
   const doc = await Book.create(body);
   const qrCode = await doc.qrcode();
   res.status(200).json({
@@ -88,14 +109,6 @@ exports.addBook = catchAsync(async (req, res, next) => {
   });
 });
 
-// exports.getAllBooks = async (req, res, next) => {
-//   const bookCodes = await Book.aggregate([
-//     { $project: { codes: 1, _id: 0 } },
-//     { $unwind: "$codes" },
-//   ]);
-//   console.log(bookCodes);
-//   console.log(bookCodes.length);
-// };
 exports.getAllBooks = handleFactory.getAll(Book, {
   _id: { $exists: true },
 });

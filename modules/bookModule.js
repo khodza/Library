@@ -16,7 +16,7 @@ const bookSchema = new mongoose.Schema(
     },
     year: {
       type: Number,
-      default: 2020,
+      required: [true, "Kitobning yilini kiriting!"],
     },
     pages: {
       type: Number,
@@ -34,7 +34,6 @@ const bookSchema = new mongoose.Schema(
     codes: [
       {
         type: String,
-        index: { unique: true },
         required: [true, "Kitob serialarini qoshing!"],
       },
     ],
