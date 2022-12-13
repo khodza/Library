@@ -71,7 +71,7 @@ const bookSchema = new mongoose.Schema(
 );
 
 bookSchema.pre("save", function (next) {
-  this.slug = slugify(`${this.studentName}`, { lower: true });
+  this.slug = slugify(`${this.name}`, { lower: true });
   next();
 });
 
