@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const _ = require("underscore");
 const AppError = require("../utils/appError");
 const genQrCode = require("../utils/genQRcode");
+const slugify = require("slugify");
 
 const bookSchema = new mongoose.Schema(
   {
