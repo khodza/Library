@@ -60,6 +60,9 @@ const bookSchema = new mongoose.Schema(
     file: {
       type: String,
     },
+    slug: {
+      type: String,
+    },
   },
   {
     toJSON: { virtuals: true },
@@ -68,10 +71,15 @@ const bookSchema = new mongoose.Schema(
 );
 
 bookSchema.pre("save", function (next) {
-  if (JSON.stringify(this.codes) === JSON.stringify(_.uniq(this.codes))) next();
-
-  next(new AppError("Birxil serialik kitob kiritish mumkun emas", 400));
+  this.slug = slugify(`${this.studentName}`, { lower: true });
+  next();
 });
+
+// bookSchema.pre("save", function (next) {
+//   if (JSON.stringify(this.codes) === JSON.stringify(_.uniq(this.codes))) next();
+
+//   next(new AppError("Birxil serialik kitob kiritish mumkun emas", 400));
+// });
 
 bookSchema.virtual("amount").get(function () {
   if (!this.codes) return null;
@@ -88,4 +96,3 @@ bookSchema.methods.qrcode = async function () {
 };
 const Book = mongoose.model("Book", bookSchema);
 module.exports = Book;
-
