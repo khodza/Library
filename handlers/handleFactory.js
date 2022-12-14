@@ -1,6 +1,5 @@
 const XLSX = require("xlsx");
 const path = require("path");
-const _ = require("underscore");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const Features = require("../utils/features");

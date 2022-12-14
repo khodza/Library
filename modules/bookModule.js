@@ -25,7 +25,7 @@ const bookSchema = new mongoose.Schema(
     category: {
       type: String,
       default: "Aniqlanmagan",
-      enum: ["Badiy", "Ilmiy", "Ingilizcha", "Aniqlanmagan"],
+      enum: ["Badiiy", "Ilmiy", "Ingilizcha", "Aniqlanmagan"],
     },
     cd_disk: {
       type: Boolean,
@@ -52,6 +52,7 @@ const bookSchema = new mongoose.Schema(
     lang: {
       type: String,
       default: "aniqlanmagan",
+      enum: ["korean", "russian", "uzbek", "english", "aniqlanmagan"],
     },
     addedAt: {
       type: Date,
@@ -88,4 +89,3 @@ bookSchema.methods.qrcode = async function () {
 };
 const Book = mongoose.model("Book", bookSchema);
 module.exports = Book;
-

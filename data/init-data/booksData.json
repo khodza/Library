@@ -5,6 +5,11 @@
     "author": "Уильям Д.Данко",
     "year": 2021,
     "pages": 416,
+    "category": "Ilmiy",
+    "cd_disk": true,
+    "get_options": "Korea",
+    "price": 900,
+    "lang": "korean",
     "codes": [
       "CH-00115",
       "CH-00117",
@@ -23,6 +28,10 @@
     "author": "J K",
     "year": 1990,
     "pages": 320,
+    "category": "Badiiy",
+    "cd_disk": true,
+    "price": 300,
+    "lang": "uzbek",
     "codes": [
       "CH-00016",
       "CH-00017",
@@ -41,6 +50,8 @@
     "author": "O'tkir Xoshimov",
     "year": 1989,
     "pages": 152,
+    "category": "Ingilizcha",
+    "lang": "russian",
     "codes": [
       "CH-00031",
       "CH-00032",
