@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
-const _ = require("underscore");
-const AppError = require("../utils/appError");
-const genQrCode = require("../utils/genQRcode");
 const slugify = require("slugify");
+const genQrCode = require("../utils/genQRcode");
 
 const bookSchema = new mongoose.Schema(
   {
@@ -77,11 +75,6 @@ bookSchema.pre("save", function (next) {
   next();
 });
 
-// bookSchema.pre("save", function (next) {
-//   if (JSON.stringify(this.codes) === JSON.stringify(_.uniq(this.codes))) next();
-
-//   next(new AppError("Birxil serialik kitob kiritish mumkun emas", 400));
-// });
 
 bookSchema.virtual("amount").get(function () {
   if (!this.codes) return null;

@@ -1,5 +1,6 @@
 const multer = require("multer");
 const path = require("path");
+const fs = require("fs");
 
 const handleFactory = require("../handlers/handleFactory");
 const Book = require("../modules/bookModule");
@@ -192,4 +193,17 @@ exports.downloadPdfFile = catchAsync(async (req, res, next) => {
   res.download(link);
 });
 
+exports.previewPdf = catchAsync(async (req, res, next) => {
+  const doc = await Book.findById(req.params.id);
+  const file = fs.createReadStream(
+    path.join(__dirname, `../data/pdf-Books/${doc.name}.pdf`)
+  );
+  const stat = fs.statSync(
+    path.join(__dirname, `../data/pdf-Books/${doc.name}.pdf`)
+  );
+  res.setHeader("Content-Length", stat.size);
+  res.setHeader("Content-Type", "application/pdf");
+  res.setHeader("Content-Disposition", `attachment; filename=${doc.name}.pdf`);
+  file.pipe(res);
+});
 exports.searchBook = handleFactory.searchDoc(Book);
