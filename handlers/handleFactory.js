@@ -36,7 +36,6 @@ exports.getAll = (Model, matchParam) =>
     if (Object.keys(queryObj).length !== 0) {
       matchParam = { ...matchParam, ...queryObj };
     }
-    console.log(matchParam);
     const doc = await features.query;
     const maxPage = await getMaxPage(Model, matchParam, req);
     res.status(200).json({

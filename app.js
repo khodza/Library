@@ -10,7 +10,6 @@ const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
 
-const path = require("path");
 const errorHandler = require("./handlers/errorHandler");
 const leaseRouter = require("./routes/leaseRoute");
 const userRoute = require("./routes/userRoute");
@@ -36,7 +35,6 @@ app.use("/api", limiter);
 
 app.use(cookieParser());
 app.use(express.json({ limit: "10kb" }));
-// app.use(express.static(path.join(__dirname, "./data/pdf-Books")));
 app.use(mongoSanitize());
 app.use(xss());
 
