@@ -75,7 +75,9 @@ exports.protect = catchAsync(async (req, res, next) => {
   const currentUser = await User.findById(decoded.id);
 
   if (!currentUser) {
-    return next(new AppError("Bu tokenga tegishli faydalanuvchi mavjud emas!", 401));
+    return next(
+      new AppError("Bu tokenga tegishli faydalanuvchi mavjud emas!", 401)
+    );
   }
 
   // 4) Check if user changed password after token was issued
@@ -132,7 +134,8 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
   try {
     await sendEmail({
       email: user.email,
-      subject: " Sizning parolingizi yangilash uchun token(10 daqiqagacha yaroqli)",
+      subject:
+        " Sizning parolingizi yangilash uchun token(10 daqiqagacha yaroqli)",
       message,
     });
 
