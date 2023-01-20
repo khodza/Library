@@ -22,9 +22,7 @@ const bookSchema = new mongoose.Schema(
       required: [true, `Kitob betlari sonini kiriting`],
     },
     category: {
-      type: String,
-      default: "Aniqlanmagan",
-      enum: ["Badiiy", "Ilmiy", "Ingilizcha", "Aniqlanmagan"],
+      type: String
     },
     cd_disk: {
       type: Boolean,
@@ -33,7 +31,7 @@ const bookSchema = new mongoose.Schema(
     codes: [
       {
         type: String,
-        required: [true, "Kitob serialarini qoshing!"],
+        // required: [true, "Kitob serialarini qoshing!"],
       },
     ],
     uniqueId: {
@@ -69,7 +67,6 @@ const bookSchema = new mongoose.Schema(
     toObject: { virtuals: true },
   }
 );
-
 bookSchema.pre("save", function (next) {
   this.slug = slugify(`${this.name}`, { lower: true });
   next();

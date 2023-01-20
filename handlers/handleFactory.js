@@ -9,6 +9,7 @@ const getMaxPage = require("../utils/maxPage");
 
 exports.createOne = (Model) =>
   catchAsync(async (req, res, next) => {
+
     const doc = await Model.create(req.body);
 
     res.status(200).json({
@@ -21,6 +22,7 @@ exports.createOne = (Model) =>
 
 exports.getAll = (Model, matchParam) =>
   catchAsync(async (req, res, next) => {
+    console.log(req);
     const features = new Features(Model.find(), req.query)
       .filter()
       .sort()

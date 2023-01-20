@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 const bookController = require("../controllers/bookController");
 const authController = require("../controllers/authController");
+const propertyController =require('../controllers/propertyController');
 
 router
   .route("/")
@@ -13,7 +14,9 @@ router
     bookController.addBook
   );
 
-router.route("/download").get(bookController.downloadAllBooks);
+//Category
+router.route("/category").get(propertyController.getAllCategories).post(propertyController.addCategory)
+router.route("/category/:id").delete(propertyController.deleteCategory).get(propertyController.getCategory)
 
 router
   .route("/:id")
@@ -25,7 +28,7 @@ router
   .route("/amount/:id")
   .patch(authController.protect, bookController.addBookCopy)
   .delete(authController.protect, bookController.deleteBookCopy);
-
+//Upload PDF
 router
   .route("/upload/:id")
   .post(
@@ -33,7 +36,15 @@ router
     bookController.uploadFile,
     bookController.uploadPdf
   );
+
+//Preview and Download PDF
+router.route("/download").get(bookController.downloadAllBooks);
 router.route("/download/:id").get(bookController.downloadPdfFile);
 router.route("/preview/:id").get(bookController.previewPdf);
+
+//Search
 router.route("/search").post(bookController.searchBook);
+
+
+
 module.exports = router;

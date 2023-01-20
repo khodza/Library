@@ -1,5 +1,12 @@
 //dublicate code 
 
+
+pagination search
+
+catigory routes
+
+
+
 learn facet 
 
 id fronted store
