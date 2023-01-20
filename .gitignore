@@ -2,5 +2,6 @@ node_modules/
 .vscode/
 .idea/
 config.env
+.eslint.js
 data/pdf-Books/*.pdf
 # data/exel-docs/*.xlsx
