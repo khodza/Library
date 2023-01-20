@@ -31,7 +31,7 @@ const bookSchema = new mongoose.Schema(
     codes: [
       {
         type: String,
-        // required: [true, "Kitob serialarini qoshing!"],
+        required: [true, "Kitob serialarini qoshing!"],
       },
     ],
     uniqueId: {
