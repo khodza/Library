@@ -16,9 +16,6 @@ const handleValidationErrorDB = function (err) {
   return new AppError(message, 400);
 };
 
-// const handleWeekPassword =function(err){
-
-// }
 
 const handleJWTError = () =>
   new AppError("Nosoz token. Qayta log in qiling!", 401);
@@ -53,28 +50,27 @@ const sendErrorProd = function (err, res) {
 module.exports = (err, req, res, next) => {
   err.statusCode = err.statusCode || 500;
   err.status = err.status || "error";
-
+  // console.log(err);
   if (process.env.NODE_ENV === "development") {
-    console.log(err);
+    // console.log(err);
     sendErrorDev(err, res);
   } else if (process.env.NODE_ENV === "production") {
-    let error = { ...err };
-    if (error.name === "CastError") {
+    if (err.name === "CastError") {
       // err-example:searching for product with invalid id
-      error = handleCastError(error);
+      err = handleCastError(err);
     }
-    if (error.code === 11000) {
-      error = handleDuplicateFields(error);
+    if (err.code === 11000) {
+      err = handleDuplicateFields(err);
     }
-    if (error._message === "Validation failed") {
-      error = handleValidationErrorDB(error);
+    if (err._message === "Validation failed") {
+      err = handleValidationErrorDB(err);
     }
-    if (error.name === "JsonWebTokenError") {
-      error = handleJWTError();
+    if (err.name === "JsonWebTokenError") {
+      err = handleJWTError();
     }
-    if (error.name === "TokenExpiredError") {
-      error = handleExpiredToken();
+    if (err.name === "TokenExpiredError") {
+      err = handleExpiredToken();
     }
-    sendErrorProd(error, res);
+    sendErrorProd(err, res);
   }
 };
