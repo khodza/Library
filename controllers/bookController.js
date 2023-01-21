@@ -187,7 +187,7 @@ exports.downloadPdfFile = catchAsync(async (req, res, next) => {
   const { file } = doc;
 
   if (!file) {
-    return next(new AppError(`This book doesn't have pdf file`));
+    return next(new AppError(`This book doesn't have pdf file`,404));
   }
   const link = path.join(__dirname, `../data/pdf-Books/${file}`);
   res.download(link);
@@ -195,12 +195,18 @@ exports.downloadPdfFile = catchAsync(async (req, res, next) => {
 
 exports.previewPdf = catchAsync(async (req, res, next) => {
   const doc = await Book.findById(req.params.id);
+
+  if (!doc.file) {
+    return next(new AppError(`This book doesn't have pdf file`,404));
+  }
+
   const file = fs.createReadStream(
     path.join(__dirname, `../data/pdf-Books/${doc.name}.pdf`)
   );
+  
   const stat = fs.statSync(
     path.join(__dirname, `../data/pdf-Books/${doc.name}.pdf`)
-  );
+    );
   res.setHeader("Content-Length", stat.size);
   res.setHeader("Content-Type", "application/pdf");
   res.setHeader("Content-Disposition", `attachment; filename=${doc.name}.pdf`);
