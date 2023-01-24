@@ -15,7 +15,7 @@ router
   );
 
 //Category
-router.route("/category").get(authController.protect,propertyController.getAllCategories).post(authController.protect,propertyController.addCategory)
+router.route("/category").get(propertyController.getAllCategories).post(authController.protect,propertyController.addCategory)
 router.route("/category/:id").delete(authController.protect,propertyController.deleteCategory).get(propertyController.getCategory)
 
 
