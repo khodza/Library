@@ -15,14 +15,10 @@ router
   );
 
 //Category
-router.route("/category").get(propertyController.getAllCategories).post(propertyController.addCategory)
-router.route("/category/:id").delete(propertyController.deleteCategory).get(propertyController.getCategory)
+router.route("/category").get(authController.protect,propertyController.getAllCategories).post(authController.protect,propertyController.addCategory)
+router.route("/category/:id").delete(authController.protect,propertyController.deleteCategory).get(propertyController.getCategory)
 
-router
-  .route("/:id")
-  .get(bookController.getBook)
-  .patch(authController.protect, bookController.updateBook)
-  .delete(authController.protect, bookController.deleteBook);
+
 
 router
   .route("/amount/:id")
@@ -42,8 +38,16 @@ router.route("/download").get(bookController.downloadAllBooks);
 router.route("/download/:id").get(bookController.downloadPdfFile);
 router.route("/preview/:id").get(bookController.previewPdf);
 
-//Search
+//SEARCH BOOK
 router.route("/search").post(bookController.searchBook);
+
+
+//GET,UPDATE,DELETE BOOK BT ID
+router
+  .route("/:id")
+  .get(bookController.getBook)
+  .patch(authController.protect, bookController.updateBook)
+  .delete(authController.protect, bookController.deleteBook);
 
 
 

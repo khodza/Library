@@ -22,7 +22,6 @@ exports.createOne = (Model) =>
 
 exports.getAll = (Model, matchParam) =>
   catchAsync(async (req, res, next) => {
-    console.log(req);
     const features = new Features(Model.find(), req.query)
       .filter()
       .sort()

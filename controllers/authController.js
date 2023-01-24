@@ -59,10 +59,7 @@ exports.protect = catchAsync(async (req, res, next) => {
     req.headers.authorization.startsWith("Bearer")
   ) {
     token = req.headers.authorization.split(" ")[1];
-  } else if (req.cookie.jwt) {
-    token = req.cookie.jwt;
-  }
-
+  } 
   if (!token) {
     return next(new AppError("Siz log in qilmagansiz!", 401));
   }
