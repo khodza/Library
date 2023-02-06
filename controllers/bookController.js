@@ -55,7 +55,7 @@ const fileFilter = (req, file, cb) => {
   }
 };
 const uploadOnUpdate = multer({ storage, fileFilter });
-exports.uploadFile = uploadOnUpdate.single("file");
+exports.uploadFile = uploadOnUpdate.single("image");
 
 exports.uploadPdf = catchAsync(async (req, res, next) => {
   if (!req.body.file) return next(new AppError("Iltimos faylni yuklang!", 400));
