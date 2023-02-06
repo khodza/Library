@@ -5,21 +5,21 @@ const genQrCode = require("../utils/genQRcode");
 const bookSchema = new mongoose.Schema(
   {
     name: {
-      unique: true,
+      // unique: true,
       type: String,
       required: [true, `Kitob nomini kiriting`],
     },
     author: {
       type: String,
-      required: [true, `Kitob muallifini kiriting`],
+      // required: [true, `Kitob muallifini kiriting`],
     },
     year: {
-      type: Number,
-      required: [true, "Kitobning yilini kiriting!"],
+      type: String,
+      // required: [true, "Kitobning yilini kiriting!"],
     },
     pages: {
       type: Number,
-      required: [true, `Kitob betlari sonini kiriting`],
+      // required: [true, `Kitob betlari sonini kiriting`],
     },
     category: {
       type: String

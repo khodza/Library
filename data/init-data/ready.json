@@ -1,0 +1,996 @@
+[
+  {
+    "name": "ARCHITECTURAL DRAWING COURSE ( A)",
+    "author": "MO ZELL -",
+    "category": "Ingliz",
+    "year": "2008",
+    "pages": 144,
+    "codes": [
+      "CH-00115",
+      "CH-00116",
+      "CH-00117",
+      "CH-00118",
+      "CH-00119",
+      "CH-00120",
+      "CH-00121",
+      "CH-00122",
+      "CH-00123",
+      "CH-01680"
+    ]
+  },
+  {
+    "name": "ADVANCED ENGINEERING MATHEMATICS PART 1",
+    "author": "ERWIN KREYSZIG",
+    "category": "Ingliz",
+    "year": "10ED",
+    "codes": [
+      "CH-00011",
+      "CH-00012",
+      "CH-00013",
+      "CH-00014",
+      "CH-00015",
+      "CH-00016",
+      "CH-0001",
+      "CH-000247",
+      "CH-00018",
+      "CH-00019",
+      "CH-00020",
+      "CH-00021",
+      "CH-00022",
+      "CH-00023",
+      "CH-00029",
+      "CH-00030"
+    ]
+  },
+  {
+    "name": "ENGINEERING MECHANICS STATICS (C)",
+    "author": "J.L.MERIAM",
+    "category": "Ingliz",
+    "year": "6ED",
+    "codes": [
+      "СH-00001",
+      "СH-00002",
+      "СH-00003",
+      "СH-00004",
+      "СH-00005",
+      "СH-00006",
+      "СH-00007",
+      "СH-00008",
+      "СH-00009",
+      "СH-00010"
+    ]
+  },
+  {
+    "name": "PHYSICS FOR SCIENTISTS AND ENGINEERS PART 1",
+    "author": "SERWAY JEWETT",
+    "category": "Ingliz",
+    "year": "9ED",
+    "codes": [
+      "CH-00031",
+      "CH-00032",
+      "CH-00033",
+      "CH-00034",
+      "CH-00035",
+      "CH-00036",
+      "CH-00037",
+      "CH-00038",
+      "CH-00039",
+      "CH-00040"
+    ]
+  },
+  {
+    "name": "PHYSICS FOR SCIENTISTS AND ENGINEERS PART 2",
+    "author": "SERWAY JEWETT",
+    "category": "Ingliz",
+    "year": "9ED",
+    "codes": [
+      "CH-00041",
+      "CH-00042",
+      "CH-00043",
+      "CH-00044",
+      "CH-00045",
+      "CH-00046",
+      "CH-00047",
+      "CH-00048",
+      "CH-00049",
+      "CH-00050"
+    ]
+  },
+  {
+    "name": "PHYSICS FOR SCIENTISTS AND ENGINEERS PART 3",
+    "author": "SERWAY JEWETT",
+    "category": "Ingliz",
+    "year": "9ED",
+    "codes": [
+      "CH-00051",
+      "CH-00052",
+      "CH-00053",
+      "CH-00054",
+      "CH-00055",
+      "CH-00056",
+      "CH-00057",
+      "CH-00058",
+      "CH-00059",
+      "CH-00060"
+    ]
+  },
+  {
+    "name": "AN INTRODUCTION TO PHILOSOPHICAL ANALYSIS",
+    "author": "JOHN HOSPERS",
+    "category": "Ingliz",
+    "year": "4ED",
+    "codes": [
+      "CH-00061",
+      "CH-00062",
+      "CH-00063",
+      "CH-00064",
+      "CH-00065",
+      "CH-00066",
+      "CH-00067",
+      "CH-00068",
+      "CH-00069",
+      "CH-00070"
+    ]
+  },
+  {
+    "name": "THE HISTORY OF WESTERN PHILOSOPHY PART-1",
+    "author": "BERTRAND RUSSELL",
+    "category": "Ingliz",
+    "pages": 475,
+    "codes": [
+      "CH-00091",
+      "CH-00092",
+      "CH-00093",
+      "CH-00094",
+      "CH-00095",
+      "CH-00096",
+      "CH-00097",
+      "CH-00098",
+      "CH-00099",
+      "CH-00214"
+    ],
+    "year": "2000"
+  },
+  {
+    "name": "ECONOMICS PART-1",
+    "author": "N.GREGORY MANKIW",
+    "category": "Ingliz",
+    "year": "2016",
+    "pages": 399,
+    "codes": [
+      "CH-00071",
+      "CH-00072",
+      "CH-00073",
+      "CH-00074",
+      "CH-00075",
+      "CH-00076",
+      "CH-00077",
+      "CH-00078",
+      "CH-00079",
+      "CH-00080"
+    ]
+  },
+  {
+    "name": "ECONOMICS PART-2 (C)",
+    "author": "N.GREGORY MANKIW",
+    "category": "Ingliz",
+    "year": "2016",
+    "pages": 836,
+    "codes": [
+      "CH-00081",
+      "CH-00082",
+      "CH-00083",
+      "CH-00084",
+      "CH-00085",
+      "CH-00086",
+      "CH-00087",
+      "CH-00088",
+      "CH-00089",
+      "CH-00090"
+    ]
+  },
+  {
+    "name": "UNIVERSITY PHYSICS PART-2",
+    "author": "VOL.1",
+    "category": "Ingliz",
+    "pages": 988,
+    "codes": [
+      "CH-00194",
+      "CH-00195",
+      "CH-00196",
+      "CH-00197",
+      "CH-00198",
+      "CH-00199",
+      "CH-00200",
+      "CH-00201",
+      "CH-00202",
+      "CH-00203"
+    ],
+    "year": "2000"
+  },
+  {
+    "name": "UNIVERSITY PHYSICS PART-1",
+    "author": "VOL.1",
+    "category": "Ingliz",
+    "pages": 470,
+    "codes": [
+      "CH-00204",
+      "CH-00205",
+      "CH-00206",
+      "CH-00207",
+      "CH-00208",
+      "CH-00209",
+      "CH-00210",
+      "CH-00211",
+      "CH-00212",
+      "CH-00213"
+    ],
+    "year": "2000"
+  },
+  {
+    "name": "FUNDAMENTALS OF FLUID MECHANICS PART-1 (C)",
+    "author": "MUNSON R.B",
+    "category": "Ingliz",
+    "pages": 399,
+    "codes": [
+      "CH-00164",
+      "CH-00165",
+      "CH-00166",
+      "CH-00167",
+      "CH-00168",
+      "CH-00169",
+      "CH-00170",
+      "CH-00171",
+      "CH-00172",
+      "CH-00173"
+    ],
+    "year": "2000"
+  },
+  {
+    "name": "FUNDAMENTALS OF FLUID MECHANICS PART-2 (C)",
+    "author": "MUNSON R.B",
+    "category": "Ingliz",
+    "pages": 747,
+    "codes": [
+      "CH-00174",
+      "CH-00175",
+      "CH-00176",
+      "CH-00177",
+      "CH-00178",
+      "CH-00179",
+      "CH-00180",
+      "CH-00181",
+      "CH-00182",
+      "CH-00183"
+    ],
+    "year": "2000"
+  },
+  {
+    "name": "SPACES IN ARCHITECTURE (A)",
+    "author": "MUNSON R.B",
+    "category": "Ingliz",
+    "year": "2015",
+    "pages": 163,
+    "codes": [
+      "CH-00154",
+      "CH-00155",
+      "CH-00156",
+      "CH-00157",
+      "CH-00158",
+      "CH-00159",
+      "CH-00160",
+      "CH-00161",
+      "CH-00162",
+      "CH-00163"
+    ]
+  },
+  {
+    "name": "REINFORCED CONCRETE PART-1",
+    "author": "EDWARD G.NAWY",
+    "category": "Ingliz",
+    "pages": 448,
+    "codes": [
+      "CH-00134",
+      "CH-00135",
+      "CH-00136",
+      "CH-00137",
+      "CH-00138",
+      "CH-00139",
+      "CH-00140",
+      "CH-00141",
+      "CH-00142",
+      "CH-00143"
+    ],
+    "year": "2000"
+  },
+  {
+    "name": "REINFORCED CONCRETE PART-2",
+    "author": "EDWARD G.NAWY",
+    "category": "Ingliz",
+    "pages": 914,
+    "codes": [
+      "CH-00144",
+      "CH-00145",
+      "CH-00146",
+      "CH-00147",
+      "CH-00148",
+      "CH-00149",
+      "CH-00150",
+      "CH-00151",
+      "CH-00152",
+      "CH-00153"
+    ],
+    "year": "2000"
+  },
+  {
+    "name": "HOW TO THINK LIKE A COMPUTER SCIENTIST (IT) Python",
+    "author": "THINK PYTHON",
+    "category": "Ingliz",
+    "year": "2015",
+    "pages": 222,
+    "codes": [
+      "CH-00109",
+      "CH-00110",
+      "CH-00111",
+      "CH-00112",
+      "CH-00113",
+      "CH-00114"
+    ]
+  },
+  {
+    "name": "OPERATIVE DESIGN",
+    "author": "ANTONY DI MARI",
+    "category": "Ingliz",
+    "year": "2021",
+    "pages": 150,
+    "codes": [
+      "CH-00124",
+      "CH-00125",
+      "CH-00126",
+      "CH-00127",
+      "CH-00128",
+      "CH-00129",
+      "CH-00130",
+      "CH-00131",
+      "CH-00132",
+      "CH-00133",
+      "СР01682"
+    ]
+  },
+  {
+    "name": "HOW TO THINK LIKE A COMPUTER SCIENTIST (IT)",
+    "author": "THOMAS SCHEFFLER",
+    "category": "Ingliz",
+    "year": "2019",
+    "pages": 122,
+    "codes": [
+      "CH-00100",
+      "CH-00101",
+      "CH-00102",
+      "CH-00103",
+      "CH-00104",
+      "CH-00105",
+      "CH-00106",
+      "CH-00107",
+      "CH-00108"
+    ]
+  },
+  {
+    "name": "AC ELECTRICAL CIRCUIT ANALYSIS (IT)",
+    "author": "JAMES M.FIORE",
+    "category": "Ingliz",
+    "year": "2020",
+    "pages": 422,
+    "codes": [
+      "CH-00184",
+      "CH-00185",
+      "CH-00186",
+      "CH-00187",
+      "CH-00188",
+      "CH-00189",
+      "CH-00190",
+      "CH-00191",
+      "CH-00192",
+      "CH-00193"
+    ]
+  },
+  {
+    "name": "Stress stability and chaos",
+    "category": "Ingliz",
+    "year": "1990",
+    "pages": 721,
+    "codes": ["CH-00231"],
+    "author": "Kiritilmagan"
+  },
+  {
+    "name": "Innovations in Fiber-Reinforced Concrete for Value",
+    "author": "N.Banthia,M.Criswell,P.Tatnall, …",
+    "category": "Ingliz",
+    "year": "2003",
+    "pages": 240,
+    "codes": ["CH-00217"]
+  },
+  {
+    "name": "REINFORCED MASONRY DESIGN",
+    "author": "Robert R.SchneideWaiter L.Dickey",
+    "category": "Ingliz",
+    "year": "1980",
+    "pages": 619,
+    "codes": ["CH-00285"]
+  },
+  {
+    "name": "THE GLOBAL POLITICAL ECONOMY",
+    "author": "Stephen Gill, David Lav",
+    "category": "Ingliz",
+    "year": "1988",
+    "pages": 394,
+    "codes": ["CH-00253"]
+  },
+  {
+    "name": "World Politics Trend and Transformation",
+    "author": "Charles W. Kegley Jr.Shannon L.",
+    "category": "Ingliz",
+    "year": "2013",
+    "pages": 583,
+    "codes": ["CH-00240"]
+  },
+  {
+    "name": "nternational Handbook of Earthquake Engineering",
+    "author": "Mario Paz",
+    "category": "Ingliz",
+    "year": "1994",
+    "pages": 545,
+    "codes": ["CH-00260"]
+  },
+  {
+    "name": "Principles of Economics",
+    "author": "N.Gregory Mankiw",
+    "category": "Ingliz",
+    "year": "2007",
+    "pages": 896,
+    "codes": ["CH-00278"]
+  },
+  {
+    "name": "The Behavior of Shells Composed of Isotropic and Composite Materials",
+    "author": "JACK R. VINSON",
+    "category": "Ingliz",
+    "year": "1993",
+    "pages": 545,
+    "codes": ["CH-00245"]
+  },
+  {
+    "name": "HIGHWAY BRIDGES",
+    "author": "RICHARD M. BARKE JAY A. PUCKETT",
+    "category": "Ingliz",
+    "year": "1997",
+    "pages": 1169,
+    "codes": ["CH-00243"]
+  },
+  {
+    "name": "REINFORCED CONCRETE",
+    "author": "Edward G. Nawy P.E",
+    "category": "Ingliz",
+    "year": "2000",
+    "pages": 777,
+    "codes": ["CH-00252"]
+  },
+  {
+    "name": "CONCRETE STRUCTURES CONCRETE BRIDGES ASSESSMENT RENOVATION OF CONCRETE STRUCTURES",
+    "author": "Denison Campbell-Allen. Harold Roper",
+    "category": "Ingliz",
+    "year": "1991",
+    "pages": 224,
+    "codes": ["CH-00263"]
+  },
+  {
+    "name": "ADVANCED ENGINEERING MATHEMATICS",
+    "author": "ERWIN KREYSZIG",
+    "category": "Ingliz",
+    "year": "1997",
+    "pages": 1156,
+    "codes": ["CH-00239"]
+  },
+  {
+    "name": "STRESSES IN PLATES AND SHELLS",
+    "author": "A.C.UGURAL",
+    "category": "Ingliz",
+    "year": "1981",
+    "pages": 317,
+    "codes": ["CH-00224"]
+  },
+  {
+    "name": "ENERGY AND VARIATIONAL METHODS IN APPLIED MECHANICS",
+    "author": "J.N.REDDY",
+    "category": "Ingliz",
+    "year": "1992",
+    "pages": 545,
+    "codes": ["CH-00223"]
+  },
+  {
+    "name": "PRINCIPLES OF COMPOSITE MATERIAL MECHANICS",
+    "author": "RONALD F. GIBSON",
+    "category": "Ingliz",
+    "year": "1994",
+    "pages": 425,
+    "codes": ["CH-00269"]
+  },
+  {
+    "name": "GUIDE TO STABILITY DESIGN CRITERIA FOR METAL STRUCTURES",
+    "author": "Theodore V.Galambos (1976 y)",
+    "category": "Ingliz",
+    "year": "1988",
+    "pages": 786,
+    "codes": ["CH-00257"]
+  },
+  {
+    "name": "Practical Analysis of COMPOSITE LAMINATES",
+    "author": "J.N.REDDY A.Miravete",
+    "category": "Ingliz",
+    "year": "1995",
+    "pages": 317,
+    "codes": ["CH-01656"]
+  },
+  {
+    "name": "QUALITY HANDBOOK for COMPOSITE MATERIALS",
+    "author": "M.H.Geier",
+    "category": "Ingliz",
+    "year": "1994",
+    "pages": 278,
+    "codes": ["CH-00272"]
+  },
+  {
+    "name": "BUCKLING AND POSTBUCKLING OF COMPOSITE PLATES EDITED BY",
+    "author": "-",
+    "category": "Ingliz",
+    "year": "1995",
+    "pages": 396,
+    "codes": ["CH-00259"]
+  },
+  {
+    "name": "ADVANCED COMPOSITES MATERIALS IN CIVIL ENGINEERING STRUCTURES",
+    "author": "Srinivasa l . Iyer Rajan Sen",
+    "category": "Ingliz",
+    "year": "1991",
+    "pages": 439,
+    "codes": ["CH-00229"]
+  },
+  {
+    "name": "NON-LINEAR DYNAMIC PROBLEMS FOR COMPOSITE CYLINDRICAL SHELLS",
+    "author": "ALEXANDER BOGDANOVICH",
+    "category": "Ingliz",
+    "year": "1991",
+    "pages": 295,
+    "codes": ["CH-00281"]
+  },
+  {
+    "name": "Mechanics of Laminated Composite Plates",
+    "author": "J.N.REDDY",
+    "category": "Ingliz",
+    "year": "1997",
+    "pages": 782,
+    "codes": ["CH-00262"]
+  },
+  {
+    "name": "STRUCTURAL STABILITY DESIGN",
+    "author": "Yuhshi Fukumoto",
+    "category": "Ingliz",
+    "year": "1997",
+    "pages": 422,
+    "codes": ["CH-00267"]
+  },
+  {
+    "name": "MECHANICS OF COMPOSITE MATERIALS",
+    "author": "ROBERT M. JONES",
+    "category": "Ingliz",
+    "year": "1975",
+    "pages": 355,
+    "codes": ["CH-01658"]
+  },
+  {
+    "name": "EARTHQUAKE ENGINEERING",
+    "author": "Yousef Bozorgnia Vitelmo V. Bertero",
+    "category": "Ingliz",
+    "year": "2004",
+    "codes": ["CH-00266"]
+  },
+  {
+    "name": "STRUKTURAL DETAILING IN CONCRETE",
+    "author": "M.Y.H Bangash",
+    "category": "Ingliz",
+    "year": "2003",
+    "pages": 457,
+    "codes": ["CH-00221"]
+  },
+  {
+    "name": "bridgescape. The Art of Designing Bridges",
+    "author": "Frederick Gottemoeller",
+    "category": "Ingliz",
+    "year": "1998",
+    "pages": 276,
+    "codes": ["CH-00279"]
+  },
+  {
+    "name": "FREEDOMNOMICS WHY THE FREE MARKET WORKS AND OTHER HALF-BAKED THEORIES DON `T",
+    "author": "JOHN R. LOTT,JR.,PH.D",
+    "category": "Ingliz",
+    "year": "2007",
+    "pages": 275,
+    "codes": ["CH-00277"]
+  },
+  {
+    "name": "THE EVOLUTION OF NUCLEAR STRATEGY",
+    "author": "LAWRENCE FREEDMAN",
+    "category": "Ingliz",
+    "year": "1983",
+    "pages": 473,
+    "codes": ["CH-00226"]
+  },
+  {
+    "name": "An Invitation to Reflexive Sociology",
+    "author": "Pierre Bourdieu.Loic J.D.Wacquant",
+    "category": "Ingliz",
+    "year": "1992",
+    "pages": 332,
+    "codes": ["CH-00227"]
+  },
+  {
+    "name": "Recursive Methods in Economic Dynamics",
+    "author": "Nancy L. Stokey Robert E. Lucas,Jr",
+    "category": "Ingliz",
+    "year": "1989",
+    "pages": 588,
+    "codes": ["CH-00264"]
+  },
+  {
+    "name": "Memes of Translation",
+    "author": "Andrew Chesterman",
+    "category": "Ingliz",
+    "year": "1997",
+    "pages": 219,
+    "codes": ["CH-00237"]
+  },
+  {
+    "name": "DILEMMAS OF WORLD POLITICS",
+    "author": "JOHN BAYLIS .N.J.RENGGER",
+    "category": "Ingliz",
+    "year": "1992",
+    "pages": 438,
+    "codes": ["CH-00235"]
+  },
+  {
+    "name": "STRUCTURAL STABILITY THEORY AND IMPLEMENTATION",
+    "author": "W.F.Chen. E.M.Lui -",
+    "category": "Ingliz",
+    "year": "1987",
+    "pages": 490,
+    "codes": ["CH-00225"]
+  },
+  {
+    "name": "CHINAS ENVIRONMENTAL CRISIS",
+    "author": "VACLAV SMIL",
+    "category": "Ingliz",
+    "year": "1993",
+    "pages": 257,
+    "codes": ["CH-00236"]
+  },
+  {
+    "name": "KARL MARX Selected Writings",
+    "author": "David McLellan",
+    "category": "Ingliz",
+    "year": "1977",
+    "pages": 625,
+    "codes": ["CH-00244"]
+  },
+  {
+    "name": "DISCOURSE STUDIES",
+    "author": "TEUN A. VAN DIJK",
+    "category": "Ingliz",
+    "year": "2011",
+    "pages": 414,
+    "codes": ["CH-00228"]
+  },
+  {
+    "name": "FORMULAS FOR STRESS,STRAIN,AND STRUCTURAL MATRICES",
+    "author": "WALTER D. PILKEY",
+    "category": "Ingliz",
+    "year": "1994",
+    "pages": 1458,
+    "codes": ["CH-00246"]
+  },
+  {
+    "name": "APPLIED NUMERICAL ANALYSIS",
+    "author": "Curtis F.Gerald O.Wheatley .1970.1978.1984 y.",
+    "category": "Ingliz",
+    "year": "1989",
+    "pages": 679,
+    "codes": ["CH-00234"]
+  },
+  {
+    "name": "TURBULENCE IN WORLD POLITICS",
+    "author": "JAMES N. ROSENAU",
+    "category": "Ingliz",
+    "year": "1990",
+    "pages": 480,
+    "codes": ["CH-00254"]
+  },
+  {
+    "name": "PEACE AND WORLD ORDER STUDIES",
+    "author": "Daniel C.Thomas Michael T. Klare",
+    "category": "Ingliz",
+    "year": "1989",
+    "pages": 666,
+    "codes": ["CH-00222"]
+  },
+  {
+    "name": "The New World of Politics",
+    "author": "Neal Riemer Douglas W.Simon",
+    "category": "Ingliz",
+    "year": "1991",
+    "pages": 558,
+    "codes": ["CH-00276"]
+  },
+  {
+    "name": "STABILITY OF STRUCTURES",
+    "author": "ZDENEK P. BAZANT LUIGI CEDOLIN",
+    "category": "Ingliz",
+    "year": "1991",
+    "pages": 984,
+    "codes": ["CH-00258"]
+  },
+  {
+    "name": "Modern Industrial Organization",
+    "author": "Dennis W. Carlton Jeffrey M. Perloff",
+    "category": "Ingliz",
+    "year": "2005",
+    "pages": 822,
+    "codes": ["CH-00230"]
+  },
+  {
+    "name": "Educational Technology International",
+    "author": "Korean Society for Educational Technology",
+    "category": "Ingliz",
+    "year": "2020",
+    "pages": 247,
+    "codes": ["CH-00218", "CH-00219", "CH-00220"]
+  },
+  {
+    "name": "ENGINEERING MECHANICS",
+    "author": "I.C.JONG , B.G.ROGERS",
+    "category": "Ingliz",
+    "year": "1991",
+    "pages": 450,
+    "codes": ["CH-00271"]
+  },
+  {
+    "name": "Numerical Modelling of Material Deformation Processes",
+    "author": "Peter Hartley, Ian Pillinger Clive Sturgess",
+    "category": "Ingliz",
+    "year": "1992",
+    "pages": 460,
+    "codes": ["CH-00232"]
+  },
+  {
+    "name": "FUNDAMENTALS OF METAL FATIGUE ANALYSIS",
+    "author": "JULIE A. BANNANTINE JESS J.C.JAMES L.HANDROCK",
+    "category": "Ingliz",
+    "year": "1990",
+    "pages": 273,
+    "codes": ["CH-00280"]
+  },
+  {
+    "name": "Engineering Mechanics DYNAMICS",
+    "author": "I.C.JONG , B.G.ROGERS",
+    "category": "Ingliz",
+    "year": "1991",
+    "pages": 934,
+    "codes": ["CH-00275"]
+  },
+  {
+    "name": "ROUTLEDGE ENCYCLOPEDIA OF TRANSLATION STUDIES",
+    "author": "Mona Baker.Gabriela Saldanha( 1998.2009.y)",
+    "category": "Ingliz",
+    "year": "2011",
+    "pages": 674,
+    "codes": ["CH-00233"]
+  },
+  {
+    "name": "FRACTURE MECHANICS",
+    "author": "T.L.ANDERSON",
+    "category": "Ingliz",
+    "year": "1995",
+    "pages": 680,
+    "codes": ["CH-00242"]
+  },
+  {
+    "name": "SYSTEMS APPROACH TO COMPUTER-INTEGRATED DESIGN AND MANUFACTURING",
+    "author": "NANUA SINGH",
+    "category": "Ingliz",
+    "year": "1996",
+    "pages": 643,
+    "codes": ["CH-00255"]
+  },
+  {
+    "name": "THE RETURN OF DEPRESSION ECONOMICS",
+    "author": "PAUL KRUGMAN",
+    "category": "Ingliz",
+    "year": "2009",
+    "pages": 191,
+    "codes": ["CH-00270"]
+  },
+  {
+    "name": "BUSINESS STATISTICS",
+    "author": "Douglas Downing,Ph.D., Jeffrey Clark, Ph.D.",
+    "category": "Ingliz",
+    "year": "2010",
+    "pages": 540,
+    "codes": ["CH-00256"]
+  },
+  {
+    "name": "Wireless Communications Networks",
+    "author": "William Stallings",
+    "category": "Ingliz",
+    "year": "2005",
+    "pages": 559,
+    "codes": ["CH-00238"]
+  },
+  {
+    "name": "Economics",
+    "author": "Daron Acemoglu. David Laibson, ..",
+    "category": "Ingliz",
+    "year": "2016",
+    "pages": 788,
+    "codes": ["CH-00259"]
+  },
+  {
+    "name": "ESSENCE OF DECISION Explaining the Cuban Missile Crisis",
+    "author": "Graham Allison , Philip Zelikow",
+    "category": "Ingliz",
+    "year": "1999",
+    "pages": 416,
+    "codes": ["CH-00265"]
+  },
+  {
+    "name": "1-2 GUG-EO GYOSAYONG JIDOSEO",
+    "author": "1-2 ЧАСТЬ",
+    "category": "Ingliz",
+    "pages": 440,
+    "codes": [
+      "CH-00481",
+      "CH-00482",
+      "CH-00483",
+      "CH-00484",
+      "CH-00485",
+      "CH-00486"
+    ],
+    "year": "2000"
+  },
+  {
+    "_id": "63e0de34e76f4f339dc5b470",
+    "name": "Sarob",
+    "author": "Abdulla Qahhor",
+    "year": "2021",
+    "pages": 302,
+    "category": "Badiiy",
+    "codes": [
+      "B-000015",
+      "B-000014",
+      "B-000013",
+      "B-000012",
+      "B-000011",
+      "B-000010"
+    ],
+    "uniqueId": "a15b20c30",
+    "get_options": "Ajou universiteti",
+    "price": 20000,
+    "lang": "uzbek",
+    "id": "63e0de34e76f4f339dc5b470"
+  },
+  {
+    "_id": "63e0ddbfe76f4f339dc5b465",
+    "name": "Xoldorxon",
+    "author": "Xalq og'zaki ijodi",
+    "year": "2019",
+    "pages": 525,
+    "category": "Badiiy",
+    "codes": [
+      "B-000192",
+      "B-000191",
+      "B-000190",
+      "B-000189",
+      "B-000188",
+      "B-000187"
+    ],
+    "uniqueId": "a14b20c30",
+    "get_options": "Ajou universiteti",
+    "price": 20000,
+    "lang": "uzbek",
+    "file": "",
+
+    "id": "63e0ddbfe76f4f339dc5b465"
+  },
+  {
+    "_id": "63e0dd5fe76f4f339dc5b45a",
+    "name": "Martin Iden",
+    "author": "Jek London",
+    "year": "2021",
+    "pages": 480,
+    "category": "Badiiy",
+    "codes": ["B-00026", "B-00025", "B-00024", "B-00023"],
+    "uniqueId": "a13b20c30",
+    "get_options": "Ajou universiteti",
+    "price": 20000,
+    "lang": "uzbek",
+    "addedAt": "2023-02-06T10:58:39.363Z",
+    "id": "63e0dd5fe76f4f339dc5b45a"
+  },
+  {
+    "_id": "63e0dd04e76f4f339dc5b44f",
+    "name": "Фарғона тонг отгунча",
+    "author": "Мирзакалон Исмоилий",
+    "year": "2010",
+    "pages": 455,
+    "category": "Badiiy",
+    "codes": [
+      "B-00340",
+      "B-00339",
+      "B-00338",
+      "B-00337",
+      "B-00336",
+      "B-00335",
+      "B-00334",
+      "B-00333",
+      "B-00332"
+    ],
+    "uniqueId": "a12b20c30",
+    "get_options": "Ajou university",
+    "price": 20000,
+    "lang": "uzbek",
+    "id": "63e0dd04e76f4f339dc5b44f"
+  },
+  {
+    "_id": "63e0dc65e76f4f339dc5b43c",
+    "name": "Баҳорнинг энг сўнгги лоласи",
+    "author": "Муҳаммад Исмоил",
+    "year": "2006",
+    "pages": 251,
+    "category": "Badiiy",
+    "codes": [
+      "B-00330",
+      "B-00329",
+      "B-00328",
+      "B-00327",
+      "B-00326",
+      "B-00325",
+      "B-00324"
+    ],
+    "uniqueId": "a11b20c30",
+    "get_options": "Ajou universiteti",
+    "price": 20000,
+    "lang": "uzbek",
+
+    "id": "63e0dc65e76f4f339dc5b43c"
+  },
+  {
+    "_id": "63e0dbb3e76f4f339dc5b42d",
+    "name": "Rim ertaklari (ertaklar to'plami)",
+    "author": "Janni Rodari",
+    "year": "2012",
+    "pages": 320,
+    "category": "Ertak",
+    "codes": [
+      "B-000276",
+      "B-000275",
+      "B-000274",
+      "B-000273",
+      "B-000272",
+      "B-000271",
+      "B-000270"
+    ],
+    "uniqueId": "a10b20c30",
+    "get_options": "Ajou universiteti",
+    "price": 20000,
+    "lang": "uzbek",
+
+    "id": "63e0dbb3e76f4f339dc5b42d"
+  }
+]

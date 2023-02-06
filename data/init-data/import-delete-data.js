@@ -24,7 +24,7 @@ const tepmUsers = JSON.parse(
   fs.readFileSync(`${__dirname}/ajou.json`, "utf-8")
 );
 const books = JSON.parse(
-  fs.readFileSync(`${__dirname}/booksData.json`, "utf-8")
+  fs.readFileSync(`${__dirname}/ready.json`, "utf-8")
 );
 const leases = JSON.parse(
   fs.readFileSync(`${__dirname}/leasesData.json`, "utf-8")
@@ -50,6 +50,15 @@ const importTempUser = async () => {
   }
   process.exit(1);
 };
+const importBook =async()=>{
+  try{
+    await Book.create(books)
+    console.log('Loaded books');
+  }catch(err){
+    console.log(err);
+  }
+  process.exit(1)
+}
 const deleteData = async () => {
   try {
     await User.deleteMany();
@@ -68,4 +77,6 @@ if (process.argv[2] === "--import") {
   deleteData();
 } else if (process.argv[2] === "--import-tempusers") {
   importTempUser();
+}else if(process.argv[2] ==="--import-book"){
+  importBook()
 }
