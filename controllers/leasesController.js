@@ -123,3 +123,6 @@ exports.downloadAllHistory = handleFactory.downloadExcel(
   { active: false },
   { deletedAt: -1 }
 );
+
+exports.searchLease = handleFactory.searchDoc(Lease,{ active: { $ne: false } });
+exports.searchLeaseHistory = handleFactory.searchDoc(Lease,{ active: { $ne: true } });

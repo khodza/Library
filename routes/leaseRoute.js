@@ -22,4 +22,7 @@ router
   .patch(leasesController.updateLease)
   .delete(leasesController.deleteLease);
 
+
+router.route("/search").post(leasesController.searchLease);
+router.route("/history/search").post(leasesController.searchLeaseHistory);
 module.exports = router;

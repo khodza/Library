@@ -71,7 +71,11 @@ leaseSchema.pre("save", function (next) {
 });
 
 leaseSchema.pre(/^find/, function (next) {
+  if (this.options.route === 'disable-active') {
+    return next()
+  }
   this.find({ active: { $ne: false } });
+  console.log(this.options.route);
   next();
 });
 leaseSchema.pre(/^find/, function (next) {

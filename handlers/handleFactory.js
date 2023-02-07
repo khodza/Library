@@ -129,12 +129,16 @@ exports.downloadExcel = (Model, fileName, matchOpt, sortOpt) =>
     res.download(down);
   });
 
-exports.searchDoc = (Model) =>
+exports.searchDoc = (Model, matchParam = {
+  _id: { $exists: true }}) =>
   catchAsync(async (req, res, next) => {
     const payload = req.body.payload.trim();
     let search = await Model.find({
-      name: { $regex: new RegExp(`^${payload}.*`, "i") },
-    }).exec();
+      ...matchParam,
+      // name: { $regex: new RegExp(`^${payload}.*`, "i") },
+      studentName:  { $regex: payload, $options: 'i' } ,
+      name:  { $regex: payload, $options: 'i' } ,
+    }).setOptions({ route: 'disable-active' });
     search = search.slice(0, 10);
     res.status(200).json({
       status: "success",
