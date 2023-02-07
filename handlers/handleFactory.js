@@ -22,6 +22,7 @@ exports.createOne = (Model) =>
 
 exports.getAll = (Model, matchParam) =>
   catchAsync(async (req, res, next) => {
+    let matchings =matchParam;
     const features = new Features(Model.find(), req.query)
       .filter()
       .sort()
@@ -35,10 +36,11 @@ exports.getAll = (Model, matchParam) =>
     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
     queryObj = JSON.parse(queryStr);
     if (Object.keys(queryObj).length !== 0) {
-      matchParam = { ...matchParam, ...queryObj };
+       matchings = { ...matchParam, ...queryObj };
     }
     const doc = await features.query;
-    const maxPage = await getMaxPage(Model, matchParam, req);
+    const maxPage = await getMaxPage(Model, matchings, req);
+
     res.status(200).json({
       status: "success",
       maxPage,

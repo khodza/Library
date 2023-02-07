@@ -1,14 +1,10 @@
-const getMaxPage = async function (Model, matchParam, req) {
-  const total = await Model.aggregate([
-    { $match: matchParam },
-    { $group: { _id: null, count: { $sum: 1 } } },
-    { $project: { _id: 0 } },
-  ]);
+const getMaxPage = async function (Model,matchParam, req) {
+  const total = await Model.countDocuments(matchParam)
   let maxPage;
-  if (total.length === 0) {
+  if (total === 0) {
     maxPage = 1;
   } else {
-    maxPage = total[0].count / req.query.limit;
+    maxPage = total/ req.query.limit;
     if (!Number.isInteger(maxPage)) {
       maxPage = Math.floor(maxPage) + 1;
     }
