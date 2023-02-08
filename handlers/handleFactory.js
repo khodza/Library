@@ -120,6 +120,11 @@ exports.downloadExcel = (Model, fileName, matchOpt, sortOpt) =>
       { $sort: sortOpt },
       { $project: { _id: 0, id: 0, __v: 0, slug: 0, active: 0 } },
     ]);
+    
+    // eslint-disable-next-line no-plusplus
+    for(let i =0;i<data.length;i++){
+      data[i].codes = data[i].codes.toString();
+    }
     let temp = JSON.stringify(data);
     temp = JSON.parse(temp);
     const ws = XLSX.utils.json_to_sheet(temp);

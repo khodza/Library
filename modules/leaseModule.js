@@ -75,7 +75,6 @@ leaseSchema.pre(/^find/, function (next) {
     return next()
   }
   this.find({ active: { $ne: false } });
-  console.log(this.options.route);
   next();
 });
 leaseSchema.pre(/^find/, function (next) {
